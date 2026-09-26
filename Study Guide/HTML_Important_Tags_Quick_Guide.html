@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Essential & Important Tags Quick Study Guide</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 15mm 12mm 15mm;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 10pt;
+      line-height: 1.45;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 18pt;
+      color: #0f172a;
+      border-bottom: 2.5px solid #2563eb;
+      padding-bottom: 6px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    h1:first-of-type {
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 14pt;
+      color: #1e3a8a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 11.5pt;
+      color: #1e40af;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+    p, ul, ol {
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 2px;
+    }
+    code {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9pt;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 1px 4px;
+      border-radius: 3px;
+      border: 1px solid #e2e8f0;
+    }
+    pre {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 8px 10px;
+      border-radius: 5px;
+      font-size: 8.5pt;
+      line-height: 1.35;
+      page-break-inside: avoid;
+      margin: 6px 0;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      border: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 10px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 12px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML5 Essential &amp; Important Tags Study Guide</h1>
+<p><em>(High-Yield Reference for College Exams, Lab Viva &amp; Assignments)</em></p>
+<hr>
+<h1>SECTION 1: DOCUMENT STRUCTURE &amp; METADATA TAGS</h1>
+<h2>1.1 <code>&lt;html&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired / Container Tag (<code>&lt;html&gt;...&lt;/html&gt;</code>)</li>
+<li><strong>Definition:</strong> The root element that wraps all content in an HTML document.</li>
+<li><strong>Purpose:</strong> Instructs browser that the document contains HTML code and defines language context.</li>
+<li><strong>Syntax &amp; Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;
+  &lt;!-- Document content --&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li><strong>Output:</strong> Defines document root boundary; no direct visual output.</li>
+<li><strong>Attributes:</strong> <code>lang=&quot;en&quot;</code> (Specifies primary document language).</li>
+<li><strong>Key Notes:</strong> Must contain exactly one <code>&lt;head&gt;</code> and one <code>&lt;body&gt;</code>.</li>
+</ul>
+<hr>
+<h2>1.2 <code>&lt;head&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired / Container Tag (<code>&lt;head&gt;...&lt;/head&gt;</code>)</li>
+<li><strong>Definition:</strong> Container for document metadata (data about the document).</li>
+<li><strong>Purpose:</strong> Stores page title, character set, CSS stylesheets, scripts, and SEO tags.</li>
+<li><strong>Syntax &amp; Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;College Portal&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+<ul>
+<li><strong>Output:</strong> Invisible on page body; configures browser settings and tab header.</li>
+<li><strong>Key Notes:</strong> Executed/parsed before rendering the <code>&lt;body&gt;</code>.</li>
+</ul>
+<hr>
+<h2>1.3 <code>&lt;title&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Tag (<code>&lt;title&gt;...&lt;/title&gt;</code>)</li>
+<li><strong>Definition:</strong> Defines the title of the HTML document.</li>
+<li><strong>Purpose:</strong> Displays text on browser tab, bookmark label, and search engine results title.</li>
+<li><strong>Syntax &amp; Example:</strong> <code>&lt;title&gt;Web Technologies Lab | CSE&lt;/title&gt;</code></li>
+<li><strong>Output:</strong> Displays title string in browser top tab bar.</li>
+<li><strong>Key Notes:</strong> Mandatory tag inside <code>&lt;head&gt;</code>. Exactly one title tag per page.</li>
+</ul>
+<hr>
+<h2>1.4 <code>&lt;body&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired / Container Tag (<code>&lt;body&gt;...&lt;/body&gt;</code>)</li>
+<li><strong>Definition:</strong> Encapsulates all visible content of an HTML document.</li>
+<li><strong>Purpose:</strong> Holds headings, paragraphs, images, tables, forms, and scripts shown to users.</li>
+<li><strong>Syntax &amp; Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;h1&gt;Welcome to CSE Portal&lt;/h1&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li><strong>Output:</strong> Renders full visual canvas of the web page.</li>
+</ul>
+<hr>
+<h2>1.5 <code>&lt;meta&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tag (<code>&lt;meta&gt;</code>)</li>
+<li><strong>Definition:</strong> Provides metadata about character encoding, page description, and viewport layout.</li>
+<li><strong>Purpose:</strong> Ensures UTF-8 symbol support and responsive layout on mobile screens.</li>
+<li><strong>Syntax &amp; Examples:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+</code></pre>
+<ul>
+<li><strong>Key Attributes:</strong><ul>
+<li><code>charset=&quot;UTF-8&quot;</code>: Unicode encoding.</li>
+<li><code>name=&quot;viewport&quot;</code> / <code>content=&quot;width=device-width, initial-scale=1.0&quot;</code>: Responsive mobile rendering.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>1.6 <code>&lt;link&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tag (<code>&lt;link&gt;</code>)</li>
+<li><strong>Definition:</strong> Links external resources to current HTML document.</li>
+<li><strong>Purpose:</strong> Attaches external CSS stylesheets or website favicons.</li>
+<li><strong>Syntax &amp; Example:</strong> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</code></li>
+<li><strong>Key Attributes:</strong> <code>rel=&quot;stylesheet&quot;</code>, <code>href=&quot;URL&quot;</code>, <code>type=&quot;text/css&quot;</code>.</li>
+</ul>
+<hr>
+<h1>SECTION 2: HEADINGS, TEXT &amp; FORMATTING TAGS</h1>
+<h2>2.1 <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Tags (<code>&lt;h1&gt;...&lt;/h1&gt;</code> to <code>&lt;h6&gt;...&lt;/h6&gt;</code>)</li>
+<li><strong>Definition:</strong> Six levels of document headings (<code>&lt;h1&gt;</code> highest priority, <code>&lt;h6&gt;</code> lowest).</li>
+<li><strong>Purpose:</strong> Organizes content hierarchy and signals topic importance to search engines.</li>
+<li><strong>Syntax &amp; Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;h1&gt;Module 1: HTML5 (Main Heading)&lt;/h1&gt;
+&lt;h2&gt;1.1 Introduction (Sub-heading)&lt;/h2&gt;
+</code></pre>
+<ul>
+<li><strong>Output:</strong> Bold text block rendered in decreasing font sizes from H1 to H6.</li>
+</ul>
+<hr>
+<h2>2.2 <code>&lt;p&gt;</code> (Paragraph)</h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Tag (<code>&lt;p&gt;...&lt;/p&gt;</code>)</li>
+<li><strong>Definition:</strong> Represents a paragraph block of text.</li>
+<li><strong>Purpose:</strong> Groups related text sentences with standard top and bottom vertical margin spacing.</li>
+<li><strong>Example:</strong> <code>&lt;p&gt;HTML is the standard markup language for Web pages.&lt;/p&gt;</code></li>
+</ul>
+<hr>
+<h2>2.3 <code>&lt;br&gt;</code> &amp; <code>&lt;hr&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Void Tags (<code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>)</li>
+<li><strong>Definitions:</strong><ul>
+<li><code>&lt;br&gt;</code>: Inserts a single text line break.</li>
+<li><code>&lt;hr&gt;</code>: Inserts a horizontal rule line break (thematic divider).</li>
+</ul>
+</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;Line 1&lt;br&gt;Line 2&lt;/p&gt;
+&lt;hr&gt;
+</code></pre>
+<hr>
+<h2>2.4 <code>&lt;a&gt;</code> (Anchor / Hyperlink)</h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Tag (<code>&lt;a&gt;...&lt;/a&gt;</code>)</li>
+<li><strong>Definition:</strong> Creates a clickable hyperlink to navigate to another page, file, or section.</li>
+<li><strong>Purpose:</strong> Enables web navigation.</li>
+<li><strong>Syntax &amp; Example:</strong> <code>&lt;a href=&quot;https://vtu.ac.in&quot; target=&quot;_blank&quot;&gt;Visit VTU Website&lt;/a&gt;</code></li>
+<li><strong>Key Attributes:</strong><ul>
+<li><code>href=&quot;URL&quot;</code>: Target location link destination.</li>
+<li><code>target=&quot;_blank&quot;</code>: Opens link in a new browser tab.</li>
+<li><code>download</code>: Prompts file download.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>2.5 <code>&lt;img&gt;</code> (Image)</h2>
+<ul>
+<li><strong>Tag Type:</strong> Void Tag (<code>&lt;img&gt;</code>)</li>
+<li><strong>Definition:</strong> Embeds an image file into the webpage layout.</li>
+<li><strong>Syntax &amp; Example:</strong> <code>&lt;img src=&quot;logo.png&quot; alt=&quot;University Logo&quot; width=&quot;150&quot; height=&quot;100&quot;&gt;</code></li>
+<li><strong>Key Attributes:</strong><ul>
+<li><code>src=&quot;path&quot;</code>: Image file source URL (Mandatory).</li>
+<li><code>alt=&quot;text&quot;</code>: Alternate text description for accessibility &amp; broken images (Mandatory).</li>
+<li><code>width</code> / <code>height</code>: Image dimensions in pixels.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>2.6 <code>&lt;strong&gt;</code> &amp; <code>&lt;em&gt;</code> (Semantic Formatting)</h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Inline Tags (<code>&lt;strong&gt;...&lt;/strong&gt;</code>, <code>&lt;em&gt;...&lt;/em&gt;</code>)</li>
+<li><strong>Definitions:</strong><ul>
+<li><code>&lt;strong&gt;</code>: Indicates strong importance (Renders as <strong>bold</strong>).</li>
+<li><code>&lt;em&gt;</code>: Indicates vocal stress emphasis (Renders as <em>italics</em>).</li>
+</ul>
+</li>
+<li><strong>Difference from <code>&lt;b&gt;</code> &amp; <code>&lt;i&gt;</code>:</strong> <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> carry semantic meaning for screen readers, whereas <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> are purely visual styling.</li>
+</ul>
+<hr>
+<h2>2.7 <code>&lt;pre&gt;</code> &amp; <code>&lt;code&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Tags (<code>&lt;pre&gt;...&lt;/pre&gt;</code>, <code>&lt;code&gt;...&lt;/code&gt;</code>)</li>
+<li><strong>Definitions:</strong><ul>
+<li><code>&lt;pre&gt;</code>: Preserves exact white spaces, tabs, and line breaks.</li>
+<li><code>&lt;code&gt;</code>: Formats inline code snippet in monospace font.</li>
+</ul>
+</li>
+<li><strong>Combined Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;pre&gt;&lt;code&gt;
+#include &amp;lt;iostream&amp;gt;
+int main() { return 0; }
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+<hr>
+<h1>SECTION 3: LIST TAGS</h1>
+<h2>3.1 Unordered (<code>&lt;ul&gt;</code>) &amp; Ordered (<code>&lt;ol&gt;</code>) Lists</h2>
+<ul>
+<li><strong>Tag Type:</strong> Container Tags (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>) paired with <code>&lt;li&gt;</code> (List Item).</li>
+<li><strong>Definitions:</strong><ul>
+<li><code>&lt;ul&gt;</code>: Bulleted list where order does not matter.</li>
+<li><code>&lt;ol&gt;</code>: Numbered sequential list.</li>
+</ul>
+</li>
+<li><strong>Examples:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol type=&quot;1&quot; start=&quot;1&quot;&gt;
+  &lt;li&gt;Step 1&lt;/li&gt;
+  &lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<ul>
+<li><strong>Key Attributes in <code>&lt;ol&gt;</code>:</strong> <code>type=&quot;1|A|a|I|i&quot;</code>, <code>start=&quot;number&quot;</code>, <code>reversed</code>.</li>
+</ul>
+<hr>
+<h2>3.2 Description List (<code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code>) <em>(Frequent Exam Question)</em></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Container Tags.</li>
+<li><strong>Definition:</strong> Renders a list of terms (<code>&lt;dt&gt;</code>) and their matching descriptions (<code>&lt;dd&gt;</code>).</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<hr>
+<h1>SECTION 4: TABLE TAGS (LAB VIVA ESSENTIAL)</h1>
+<h2>4.1 <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;caption&gt;</code></h2>
+<ul>
+<li><strong>Definitions:</strong><ul>
+<li><code>&lt;table&gt;</code>: Container grid for tabular data.</li>
+<li><code>&lt;caption&gt;</code>: Table heading title caption.</li>
+<li><code>&lt;tr&gt;</code>: Table Row.</li>
+<li><code>&lt;th&gt;</code>: Table Header Cell (Bold &amp; centered).</li>
+<li><code>&lt;td&gt;</code>: Table Data Cell.</li>
+</ul>
+</li>
+<li><strong>Example with <code>colspan</code> &amp; <code>rowspan</code>:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;table border=&quot;1&quot;&gt;
+  &lt;caption&gt;Student Marks Sheet&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;USN&lt;/th&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Marks (Lab + Theory)&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1VU22CS001&lt;/td&gt;
+    &lt;td&gt;Aryansh&lt;/td&gt;
+    &lt;td&gt;48&lt;/td&gt;
+    &lt;td&gt;95&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<ul>
+<li><strong>Key Cell Attributes:</strong><ul>
+<li><code>colspan=&quot;n&quot;</code>: Merges <em>n</em> adjacent columns horizontally.</li>
+<li><code>rowspan=&quot;n&quot;</code>: Merges <em>n</em> adjacent rows vertically.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1>SECTION 5: FORMS &amp; INPUT CONTROLS (HIGHEST WEIGHTAGE)</h1>
+<h2>5.1 <code>&lt;form&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Container Tag (<code>&lt;form&gt;...&lt;/form&gt;</code>)</li>
+<li><strong>Definition:</strong> Container used to collect user input data and transmit it to a web server.</li>
+<li><strong>Syntax &amp; Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;/submit-data.php&quot; method=&quot;POST&quot;&gt;
+  &lt;!-- Input controls --&gt;
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li><strong>Key Attributes:</strong><ul>
+<li><code>action=&quot;URL&quot;</code>: Target server script endpoint.</li>
+<li><code>method=&quot;GET|POST&quot;</code>: HTTP method. (<code>GET</code> appends data in URL; <code>POST</code> sends data securely in HTTP request payload body).</li>
+<li><code>enctype=&quot;multipart/form-data&quot;</code>: Mandatory when uploading files via <code>&lt;input type=&quot;file&quot;&gt;</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>5.2 <code>&lt;input&gt;</code> Types &amp; Attributes</h2>
+<ul>
+<li><strong>Tag Type:</strong> Void Tag (<code>&lt;input&gt;</code>)</li>
+<li><strong>Essential Input Types Table:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>type</code> Value</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>text</code></td>
+<td>Single-line plain text entry.</td>
+<td><code>&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>Masks text input with dots/asterisks.</td>
+<td><code>&lt;input type=&quot;password&quot; name=&quot;pass&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email address entry with auto-validation.</td>
+<td><code>&lt;input type=&quot;email&quot; name=&quot;useremail&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td>Numeric input with min/max bounds.</td>
+<td><code>&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>radio</code></td>
+<td>Radio button (select ONLY ONE from group).</td>
+<td><code>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>checkbox</code></td>
+<td>Checkbox toggle (select MULTIPLE choices).</td>
+<td><code>&lt;input type=&quot;checkbox&quot; name=&quot;skills&quot; value=&quot;html&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>file</code></td>
+<td>File attachment picker.</td>
+<td><code>&lt;input type=&quot;file&quot; name=&quot;resume&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>submit</code></td>
+<td>Submits form to server.</td>
+<td><code>&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>reset</code></td>
+<td>Resets form fields to default values.</td>
+<td><code>&lt;input type=&quot;reset&quot; value=&quot;Clear&quot;&gt;</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>Essential Input Attributes:</strong><ul>
+<li><code>name=&quot;str&quot;</code>: Variable key sent to server payload (Mandatory).</li>
+<li><code>value=&quot;str&quot;</code>: Initial or submitted value.</li>
+<li><code>placeholder=&quot;text&quot;</code>: Hint text shown inside empty input box.</li>
+<li><code>required</code>: Prevents form submission if field is blank.</li>
+<li><code>readonly</code>: Field is readable but user cannot edit text.</li>
+<li><code>disabled</code>: Deactivates field and excludes it from form submission payload.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>5.3 <code>&lt;label&gt;</code></h2>
+<ul>
+<li><strong>Tag Type:</strong> Paired Tag (<code>&lt;label&gt;...&lt;/label&gt;</code>)</li>
+<li><strong>Purpose:</strong> Binds readable text label to an input field for accessibility.</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;label for=&quot;student-usn&quot;&gt;Enter USN:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;student-usn&quot; name=&quot;usn&quot;&gt;
+</code></pre>
+<ul>
+<li><strong>Key Attribute:</strong> <code>for=&quot;id_value&quot;</code> (Must match target input&#39;s <code>id</code> attribute).</li>
+</ul>
+<hr>
+<h2>5.4 <code>&lt;select&gt;</code> &amp; <code>&lt;option&gt;</code> (Dropdown Menu)</h2>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;label for=&quot;branch&quot;&gt;Select Branch:&lt;/label&gt;
+&lt;select id=&quot;branch&quot; name=&quot;branch&quot;&gt;
+  &lt;option value=&quot;cse&quot;&gt;Computer Science&lt;/option&gt;
+  &lt;option value=&quot;ise&quot;&gt;Information Science&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<hr>
+<h2>5.5 <code>&lt;textarea&gt;</code> (Multi-line Text Area)</h2>
+<ul>
+<li><strong>Example:</strong> <code>&lt;textarea name=&quot;address&quot; rows=&quot;4&quot; cols=&quot;30&quot; placeholder=&quot;Enter full address...&quot;&gt;&lt;/textarea&gt;</code></li>
+</ul>
+<hr>
+<h1>SECTION 6: SEMANTIC LAYOUT TAGS (MODERN HTML5)</h1>
+<p>HTML5 introduced semantic tags to give clear meaning to web layout sections instead of using generic <code>&lt;div&gt;</code> elements for everything.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Purpose &amp; Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;header&gt;</code></td>
+<td>Represents top header banner containing title, logo, and main navigation.</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>Defines container for primary navigation hyperlink menu bar.</td>
+</tr>
+<tr>
+<td><code>&lt;main&gt;</code></td>
+<td>Encapsulates the unique primary content of the web page (Max 1 per page).</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>Groups related content logically into thematic chapters or topics.</td>
+</tr>
+<tr>
+<td><code>&lt;article&gt;</code></td>
+<td>Represents a self-contained, independent post or article.</td>
+</tr>
+<tr>
+<td><code>&lt;aside&gt;</code></td>
+<td>Defines sidebar or callout box with related peripheral content.</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>Defines bottom footer area containing copyright, terms, and contact details.</td>
+</tr>
+<tr>
+<td><code>&lt;div&gt;</code></td>
+<td>Generic non-semantic <strong>block-level</strong> container used for CSS styling.</td>
+</tr>
+<tr>
+<td><code>&lt;span&gt;</code></td>
+<td>Generic non-semantic <strong>inline</strong> container used for inline text styling.</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>SECTION 7: MULTIMEDIA &amp; INTERACTIVE TAGS</h1>
+<h2>7.1 <code>&lt;video&gt;</code> &amp; <code>&lt;audio&gt;</code></h2>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;!-- Video Player --&gt;
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls poster=&quot;thumb.jpg&quot;&gt;
+  &lt;source src=&quot;lecture.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  Your browser does not support video playback.
+&lt;/video&gt;
+</code></pre>
+<ul>
+<li><strong>Key Attributes:</strong> <code>controls</code> (shows play/pause buttons), <code>autoplay</code>, <code>loop</code>, <code>muted</code>.</li>
+</ul>
+<hr>
+<h2>7.2 <code>&lt;iframe&gt;</code> (Inline Frame)</h2>
+<ul>
+<li><strong>Definition:</strong> Embeds an external web page or YouTube video window inside current page.</li>
+<li><strong>Example:</strong> <code>&lt;iframe src=&quot;https://maps.google.com&quot; width=&quot;400&quot; height=&quot;300&quot; title=&quot;Map&quot;&gt;&lt;/iframe&gt;</code></li>
+</ul>
+<hr>
+<h2>7.3 <code>&lt;details&gt;</code> &amp; <code>&lt;summary&gt;</code> (Accordion Widget)</h2>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;details&gt;
+  &lt;summary&gt;Click to view Exam Rule&lt;/summary&gt;
+  &lt;p&gt;Bring college ID card to examination hall.&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<hr>
+<h1>SECTION 8: QUICK REVISION &amp; COMPARISON SUMMARY</h1>
+<h3>1. Block-Level vs Inline Elements</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Block-Level Elements</th>
+<th>Inline Elements</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Line Break</strong></td>
+<td>Starts on a <strong>new line</strong>; forces newline after.</td>
+<td>Fits <strong>inline</strong> with surrounding text.</td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>Takes <strong>100% full container width</strong>.</td>
+<td>Takes ONLY width required by content.</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td><code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;form&gt;</code></td>
+<td><code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;input&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h3>2. Common Void (Self-Closing) Elements List</h3>
+<p>Void elements <strong>cannot contain child text/content</strong> and <strong>do NOT have closing tags</strong>:</p>
+<ul>
+<li><code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;source&gt;</code></li>
+</ul>
+<hr>
+<h1>SECTION 9: COMPLETE EXAM PRACTICE HTML PAGE</h1>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Student Registration Portal&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;Department of Computer Science&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt; | &lt;a href=&quot;#register&quot;&gt;Register&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section id=&quot;about&quot;&gt;
+      &lt;h2&gt;Web Technology Lab Course&lt;/h2&gt;
+      &lt;p&gt;Learn &lt;strong&gt;HTML5&lt;/strong&gt;, &lt;em&gt;CSS3&lt;/em&gt;, and JavaScript.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;register&quot;&gt;
+      &lt;h2&gt;Student Registration Form&lt;/h2&gt;
+      &lt;form action=&quot;/submit&quot; method=&quot;POST&quot;&gt;
+        &lt;p&gt;
+          &lt;label for=&quot;usn&quot;&gt;USN:&lt;/label&gt;&lt;br&gt;
+          &lt;input type=&quot;text&quot; id=&quot;usn&quot; name=&quot;usn&quot; required placeholder=&quot;e.g. 1VU22CS001&quot;&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;label for=&quot;branch&quot;&gt;Branch:&lt;/label&gt;&lt;br&gt;
+          &lt;select id=&quot;branch&quot; name=&quot;branch&quot;&gt;
+            &lt;option value=&quot;cse&quot;&gt;CSE&lt;/option&gt;
+            &lt;option value=&quot;ise&quot;&gt;ISE&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;input type=&quot;submit&quot; value=&quot;Register Student&quot;&gt;
+        &lt;/p&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 College Web Portal. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</body>
+</html>

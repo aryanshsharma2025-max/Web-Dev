@@ -1,0 +1,2934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSE 3rd Sem Web Technologies Complete Tags & Attributes HTML5 Study Guide</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 15mm 14mm 15mm;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 10pt;
+      line-height: 1.48;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 19pt;
+      color: #0f172a;
+      border-bottom: 2.5px solid #2563eb;
+      padding-bottom: 6px;
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+    h1:first-of-type {
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 14pt;
+      color: #1e3a8a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 11.5pt;
+      color: #1e40af;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+    h4 {
+      font-size: 10pt;
+      color: #334155;
+      margin-top: 8px;
+      margin-bottom: 3px;
+      page-break-after: avoid;
+    }
+    p, ul, ol {
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 2px;
+    }
+    code {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9pt;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 1px 4px;
+      border-radius: 3px;
+      border: 1px solid #e2e8f0;
+    }
+    pre {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 8px 10px;
+      border-radius: 5px;
+      font-size: 8.5pt;
+      line-height: 1.35;
+      page-break-inside: avoid;
+      margin: 6px 0;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      border: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 10px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 14px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Technologies (HTML5) Complete Tags &amp; Attributes Reference Guide</h1>
+<p><strong>Degree:</strong> Bachelor of Engineering (B.E.) / B.Tech in Computer Science &amp; Engineering (CSE)<br><strong>Subject:</strong> Web Technologies / Web Programming (3rd/4th Semester Curriculum)<br><strong>Standard:</strong> Complete W3C / WHATWG HTML5 Specifications</p>
+<hr>
+<h1>MODULE 1: DOCUMENT STRUCTURE &amp; METADATA TAGS</h1>
+<h3>1.1 <code>&lt;html&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;html&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;html&gt;...&lt;/html&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired / Container Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;html&gt;</code> element is the root element of an HTML document. All other HTML tags, elements, and content must be enclosed within this element.</p>
+<h4>3. Purpose / Function</h4>
+<p>Serves as the outer container holding both metadata (<code>&lt;head&gt;</code>) and body content (<code>&lt;body&gt;</code>). Instructs browser parsers that the file contains standard HTML markup.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+&lt;head&gt;
+  &lt;title&gt;VTU CSE Portal&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome Students&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders the root HTML document. The <code>&lt;html&gt;</code> tag itself has no visual box appearance.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>lang</code></td>
+<td>Specifies the primary natural language of the document content for search engines and screen readers.</td>
+<td>Language codes (<code>en</code>, <code>en-US</code>, <code>hi</code>, <code>fr</code>)</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td>Specifies text directionality inside the document.</td>
+<td><code>ltr</code> (Left-to-Right), <code>rtl</code> (Right-to-Left), <code>auto</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>xmlns</code></td>
+<td>XML Namespace declaration required when parsing document as XHTML.</td>
+<td><code>http://www.w3.org/1999/xhtml</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>manifest</code></td>
+<td>Path to offline application cache manifest file.</td>
+<td>URL string</td>
+<td>Obsolete in HTML5</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;html lang=&quot;en-US&quot; dir=&quot;ltr&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used as the root container on every web document globally.</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+  &lt;!-- Complete web portal --&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Must contain exactly one <code>&lt;head&gt;</code> element followed by0 exactly one <code>&lt;body&gt;</code> element.</p>
+<h4>11. Related Tags</h4>
+<p>Parent element of <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>. Child of <code>&lt;!DOCTYPE html&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> <code>manifest</code> attribute is obsolete in HTML5.</p>
+<hr>
+<h3>1.2 <code>&lt;head&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;head&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;head&gt;...&lt;/head&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired / Container Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;head&gt;</code> element is a container for document metadata (data about the HTML document) that is processed by the browser and search engines.</p>
+<h4>3. Purpose / Function</h4>
+<p>Contains document settings, character encoding, title bar text, external CSS links, inline styles, and JavaScript scripts before the body loads.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;CSE Web Tech Assignment&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Invisible on the webpage body canvas. Configures background document metadata and browser tab settings.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>profile</code></td>
+<td>Specifies URL to a metadata profile dictionary.</td>
+<td>URL string</td>
+<td>Obsolete in HTML5</td>
+</tr>
+<tr>
+<td>Global Attributes</td>
+<td>Standard global attributes (<code>id</code>, <code>class</code>, <code>lang</code>, <code>dir</code>).</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;head lang=&quot;en&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used in every web page to load styles, SEO tags, and scripts.</li>
+</ul>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Department Portal&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Must be placed immediately after <code>&lt;html&gt;</code> and before <code>&lt;body&gt;</code>.</p>
+<h4>11. Related Tags</h4>
+<p>Contains <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;base&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Core structural metadata container.</p>
+<hr>
+<h3>1.3 <code>&lt;title&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;title&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;title&gt;...&lt;/title&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;title&gt;</code> element specifies the title of the document shown in the browser&#39;s title bar or page tab.</p>
+<h4>3. Purpose / Function</h4>
+<p>Displays text in browser tabs, provides the default name when bookmarking a page, and serves as the main heading in search engine result pages (SERPs).</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;title&gt;Title Text&lt;/title&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;title&gt;Web Technologies Lab | 3rd Sem CSE&lt;/title&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Displays &quot;Web Technologies Lab | 3rd Sem CSE&quot; inside the top tab of the web browser.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Global Attributes</td>
+<td>Standard global attributes.</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;title&gt;VTU CSE Semester 3 Results 2026&lt;/title&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Critical for Web SEO and browser window identification.</li>
+</ul>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;Student Registration | VTU Portal&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Must contain text only; child HTML tags inside <code>&lt;title&gt;</code> are ignored.</p>
+<h4>11. Related Tags</h4>
+<p>Parent element is <code>&lt;head&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Mandatory metadata tag.</p>
+<hr>
+<h3>1.4 <code>&lt;body&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;body&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;body&gt;...&lt;/body&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired / Container Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;body&gt;</code> element defines the document&#39;s body, which contains all the visible contents of an HTML document.</p>
+<h4>3. Purpose / Function</h4>
+<p>Acts as the main visual canvas holding text, headings, paragraphs, images, hyperlinks, tables, forms, and interactive widgets.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;!-- Visible page content --&gt;
+&lt;/body&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;body onload=&quot;startApp()&quot;&gt;
+  &lt;h1&gt;Computer Science Department&lt;/h1&gt;
+  &lt;p&gt;Welcome to Web Programming Lab.&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a white canvas page containing a large heading &quot;Computer Science Department&quot; and paragraph text.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>onload</code></td>
+<td>Fires script after body finishes loading.</td>
+<td>JS code string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>onunload</code></td>
+<td>Fires script when user leaves page.</td>
+<td>JS code string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>onresize</code></td>
+<td>Fires script when browser window is resized.</td>
+<td>JS code string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>onpopstate</code></td>
+<td>Fires script when session history changes.</td>
+<td>JS code string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ononline</code> / <code>onoffline</code></td>
+<td>Fires script when browser connection state toggles.</td>
+<td>JS code string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>bgcolor</code></td>
+<td>Background color (Obsolete).</td>
+<td>Color hex/name</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>Text color (Obsolete).</td>
+<td>Color hex/name</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>link</code> / <code>vlink</code> / <code>alink</code></td>
+<td>Hyperlink colors (Obsolete).</td>
+<td>Color hex/name</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;body class=&quot;bg-light text-dark&quot; onload=&quot;initApp()&quot; onresize=&quot;adjustLayout()&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Root container for all user-facing web user interfaces.</li>
+</ul>
+<pre><code class="language-html">&lt;body id=&quot;app-root&quot;&gt;
+  &lt;header&gt;Header&lt;/header&gt;
+  &lt;main&gt;Main Content&lt;/main&gt;
+&lt;/body&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>There can be only ONE <code>&lt;body&gt;</code> element in an HTML document.</p>
+<h4>11. Related Tags</h4>
+<p>Sibling to <code>&lt;head&gt;</code>. Parent of all visible layout elements.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Legacy styling attributes (<code>bgcolor</code>, <code>text</code>, <code>link</code>) are obsolete in HTML5.</p>
+<hr>
+<h3>1.5 <code>&lt;meta&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;meta&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;meta&gt;</code></li>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;meta&gt;</code> element provides metadata about the HTML document that cannot be represented by other HTML meta-related elements.</p>
+<h4>3. Purpose / Function</h4>
+<p>Configures character set encoding, responsive mobile viewport scaling, page description for search engines, and HTTP header overrides.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;meta name=&quot;spec&quot; content=&quot;value&quot;&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;CSE Web Tech Notes&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Aryansh&quot;&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Non-visual element. Enables proper character decoding (UTF-8) and mobile responsiveness.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>charset</code></td>
+<td>Specifies character encoding format for document.</td>
+<td><code>UTF-8</code>, <code>ISO-8859-1</code></td>
+<td>Mandatory in HTML5</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Specifies name of metadata property.</td>
+<td><code>viewport</code>, <code>description</code>, <code>keywords</code>, <code>author</code>, <code>robots</code>, <code>theme-color</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>Value associated with <code>name</code> or <code>http-equiv</code>.</td>
+<td>Property value string</td>
+<td>Required with <code>name</code></td>
+</tr>
+<tr>
+<td><code>http-equiv</code></td>
+<td>Pragma directive equivalent to HTTP response headers.</td>
+<td><code>refresh</code>, <code>content-type</code>, <code>default-style</code>, <code>X-UA-Compatible</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>media</code></td>
+<td>Specifies media target for metadata.</td>
+<td>Media query string</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Essential for mobile responsive web design and SEO indexing.</li>
+</ul>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML5, CSE, Web Tech, VTU&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot;&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Always specify <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> as early as possible inside <code>&lt;head&gt;</code>.</p>
+<h4>11. Related Tags</h4>
+<p>Placed inside <code>&lt;head&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Standard metadata tag.</p>
+<hr>
+<h3>1.6 <code>&lt;link&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;link&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;link&gt;</code></li>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;link&gt;</code> element specifies relationships between the current document and an external resource.</p>
+<h4>3. Purpose / Function</h4>
+<p>Most commonly used to link external CSS stylesheets (<code>style.css</code>), favicons, or web fonts.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;link rel=&quot;relationship&quot; href=&quot;URL&quot;&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
+&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Imports external styles/icons into document without generating inline text.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rel</code></td>
+<td>Specifies relationship type between current document and linked resource.</td>
+<td><code>stylesheet</code>, <code>icon</code>, <code>canonical</code>, <code>preload</code>, <code>prefetch</code>, <code>author</code>, <code>alternate</code></td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>href</code></td>
+<td>URL location path of linked resource.</td>
+<td>URL string</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>MIME media type of linked resource.</td>
+<td><code>text/css</code>, <code>image/x-icon</code>, <code>font/woff2</code></td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>media</code></td>
+<td>Specifies target device media query.</td>
+<td><code>screen</code>, <code>print</code>, <code>(max-width: 600px)</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>sizes</code></td>
+<td>Specifies icon size dimensions for visual icons.</td>
+<td><code>16x16</code>, <code>32x32</code>, <code>any</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>crossorigin</code></td>
+<td>Configures CORS fetching behavior.</td>
+<td><code>anonymous</code>, <code>use-credentials</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>integrity</code></td>
+<td>Base64 hash value for Subresource Integrity (SRI) security verification.</td>
+<td>Hash string (<code>sha384-...</code>)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>as</code></td>
+<td>Specifies content type when preloading resources.</td>
+<td><code>style</code>, <code>script</code>, <code>font</code>, <code>image</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>hreflang</code></td>
+<td>Language code of linked document.</td>
+<td>Language code (<code>en</code>, <code>hi</code>)</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.example.com/bootstrap.min.css&quot; integrity=&quot;sha384-xyz&quot; crossorigin=&quot;anonymous&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Attaches external CSS stylesheets across all production web applications.</li>
+</ul>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;print.css&quot; media=&quot;print&quot;&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Must be placed inside <code>&lt;head&gt;</code>. Void tag (no closing <code>&lt;/link&gt;</code> tag).</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Standard element.</p>
+<hr>
+<h1>MODULE 2: HEADINGS, TEXT FORMATTING &amp; LINKS</h1>
+<h3>2.1 <code>&lt;h1 to h6&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;h1 to h6&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;h1&gt;...&lt;/h1&gt; to &lt;h6&gt;...&lt;/h6&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired / Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> elements represent six levels of document section headings. <code>&lt;h1&gt;</code> is the highest (most important) level, and <code>&lt;h6&gt;</code> is the lowest level.</p>
+<h4>3. Purpose / Function</h4>
+<p>Structures document outline hierarchy, improves content readability, and signals section topics to search engines and screen readers.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;h1&gt;Heading Level 1&lt;/h1&gt;
+&lt;h2&gt;Heading Level 2&lt;/h2&gt;
+&lt;h3&gt;Heading Level 3&lt;/h3&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;h1&gt;Web Technologies (18CS52)&lt;/h1&gt;
+&lt;h2&gt;Module 1: HTML5 Syntax&lt;/h2&gt;
+&lt;h3&gt;1.1 Tags Overview&lt;/h3&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders bold heading text blocks with default font sizes decreasing from <h1> (largest) to <h6> (smallest).</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>align</code></td>
+<td>Sets heading alignment (Obsolete).</td>
+<td><code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td>Global Attributes</td>
+<td>Standard global attributes (<code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, <code>dir</code>, <code>lang</code>, <code>hidden</code>, <code>tabindex</code>, <code>accesskey</code>, <code>role</code>).</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;h1 id=&quot;top-title&quot; class=&quot;text-primary font-bold&quot; dir=&quot;ltr&quot; tabindex=&quot;0&quot;&gt;CSE Department&lt;/h1&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for page article titles, section headers, and documentation headings.</li>
+</ul>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;h1 id=&quot;ds-lab&quot;&gt;Data Structures Lab&lt;/h1&gt;
+  &lt;h2&gt;Binary Search Trees&lt;/h2&gt;
+&lt;/article&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Use headings in natural descending sequence (<code>&lt;h1&gt;</code> -&gt; <code>&lt;h2&gt;</code> -&gt; <code>&lt;h3&gt;</code>). Avoid skipping heading levels.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;p&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> <code>align</code> attribute (<code>&lt;h1 align=&quot;center&quot;&gt;</code>) is obsolete; use CSS <code>text-align</code> instead.</p>
+<hr>
+<h3>2.2 <code>&lt;p&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;p&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;p&gt;...&lt;/p&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired / Container Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;p&gt;</code> element represents a paragraph block of text.</p>
+<h4>3. Purpose / Function</h4>
+<p>Groups text sentences logically, automatically creating vertical blank line margins before and after the text block.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;p&gt;Paragraph text content...&lt;/p&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;p&gt;HTML5 is the fifth and current major version of the HTML standard.&lt;/p&gt;
+&lt;p&gt;It includes new semantic layout elements like header, footer, and section.&lt;/p&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders two distinct text paragraphs separated by vertical space margins.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>align</code></td>
+<td>Paragraph alignment (Obsolete).</td>
+<td><code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td>Global Attributes</td>
+<td>Standard global attributes (<code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, <code>dir</code>, <code>lang</code>, <code>hidden</code>, <code>tabindex</code>).</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;p id=&quot;intro-p&quot; class=&quot;lead text-muted&quot; dir=&quot;ltr&quot;&gt;Updated on August 2026.&lt;/p&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for all prose body text across articles, blogs, and portals.</li>
+</ul>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;p class=&quot;description&quot;&gt;Student USN must be verified before login.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Browser engines automatically add vertical block margins around <code>&lt;p&gt;</code> tags.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;br&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Standard element.</p>
+<hr>
+<h3>2.3 <code>&lt;br and hr&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;br and hr&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;br&gt; and &lt;hr&gt;</code></li>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p><code>&lt;br&gt;</code> inserts a single text line break. <code>&lt;hr&gt;</code> inserts a thematic horizontal rule line divider.</p>
+<h4>3. Purpose / Function</h4>
+<p><code>&lt;br&gt;</code> breaks a text line without starting a new paragraph margin. <code>&lt;hr&gt;</code> creates a visual section break line.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;p&gt;Line 1&lt;br&gt;Line 2&lt;/p&gt;
+&lt;hr&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;h1&gt;VTU Examination Notice&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Date: 01 Sept 2026&lt;br&gt;Time: 9:30 AM&lt;/p&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a title heading, followed by a solid horizontal divider line, followed by two lines of text stacked directly on top of each other.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>align</code> (in hr)</td>
+<td>Rule alignment (Obsolete).</td>
+<td><code>left</code>, <code>center</code>, <code>right</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>width</code> (in hr)</td>
+<td>Rule width (Obsolete).</td>
+<td>Pixels / percentage</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>size</code> (in hr)</td>
+<td>Rule height/thickness (Obsolete).</td>
+<td>Pixels</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>noshade</code> (in hr)</td>
+<td>Solid color without shading (Obsolete).</td>
+<td><code>noshade</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>color</code> (in hr)</td>
+<td>Rule color (Obsolete).</td>
+<td>Color hex/name</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td>Global Attributes</td>
+<td>Standard global attributes.</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;hr id=&quot;section-divider&quot; class=&quot;my-4 border-top&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for address lines, poem line breaks, and dividing article sections.</li>
+</ul>
+<pre><code class="language-html">&lt;address&gt;CSE Block&lt;br&gt;Belagavi&lt;/address&gt;
+&lt;hr&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Use <code>&lt;br&gt;</code> ONLY for line breaks that are part of text content (like addresses/poetry), NOT for creating layout spacing (use CSS margins instead).</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Legacy <code>&lt;hr width=&quot;50%&quot; align=&quot;center&quot;&gt;</code> styling attributes are obsolete in HTML5.</p>
+<hr>
+<h3>2.4 <code>&lt;a&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;a&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;a href=&quot;...&quot;&gt;...&lt;/a&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;a&gt;</code> (Anchor) element creates a hyperlink to web pages, files, email addresses, location anchors, or external URLs.</p>
+<h4>3. Purpose / Function</h4>
+<p>Forms the primary building block of the Web, enabling navigation between documents.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;a href=&quot;URL&quot; target=&quot;_blank&quot;&gt;Link Text&lt;/a&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;a href=&quot;https://vtu.ac.in&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; title=&quot;VTU Portal&quot;&gt;Visit VTU Official Website&lt;/a&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders underlined blue text &quot;Visit VTU Official Website&quot;. Clicking it opens vtu.ac.in in a new browser tab.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>href</code></td>
+<td>Target URL or page anchor fragment link destination.</td>
+<td>URL string (<code>https://...</code>, <code>#anchor</code>, <code>mailto:...</code>, <code>tel:...</code>)</td>
+<td>Mandatory for links</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Target browsing context for opening link.</td>
+<td><code>_blank</code> (new tab), <code>_self</code> (same tab), <code>_parent</code>, <code>_top</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>download</code></td>
+<td>Prompts browser to download target file instead of navigating.</td>
+<td>Filename string or empty</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>rel</code></td>
+<td>Specifies relationship between current document and target document.</td>
+<td><code>noopener</code>, <code>noreferrer</code>, <code>author</code>, <code>bookmark</code>, <code>external</code>, <code>help</code>, <code>license</code>, <code>next</code>, <code>nofollow</code>, <code>prev</code>, <code>search</code></td>
+<td>Security Best Practice</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>MIME type of target resource.</td>
+<td><code>application/pdf</code>, <code>text/html</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>hreflang</code></td>
+<td>Natural language of linked target page.</td>
+<td>Language code (<code>en</code>, <code>hi</code>)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>referrerpolicy</code></td>
+<td>Controls referrer header sent with request.</td>
+<td><code>no-referrer</code>, <code>origin</code>, <code>strict-origin-when-cross-origin</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ping</code></td>
+<td>List of URLs to notify via POST when user follows link.</td>
+<td>Space-separated URLs</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>name</code> / <code>charset</code> / <code>coords</code> / <code>shape</code> / <code>rev</code></td>
+<td>Legacy attributes.</td>
+<td>Strings</td>
+<td>Obsolete in HTML5</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;a href=&quot;syllabus.pdf&quot; download=&quot;CSE_Syllabus.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;btn btn-primary&quot;&gt;Download Syllabus&lt;/a&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for menu links, button actions, document downloads, and internal page jump anchors (<code>#section1</code>).</li>
+</ul>
+<pre><code class="language-html">&lt;nav&gt;&lt;a href=&quot;/home&quot;&gt;Home&lt;/a&gt; | &lt;a href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Always use <code>rel=&quot;noopener noreferrer&quot;</code> when setting <code>target=&quot;_blank&quot;</code> to prevent security tabnabbing vulnerabilities.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;nav&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;img&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Core hyperlink element.</p>
+<hr>
+<h3>2.5 <code>&lt;img&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;img&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;img&gt;</code></li>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;img&gt;</code> element embeds an image into an HTML document.</p>
+<h4>3. Purpose / Function</h4>
+<p>Displays graphic files (JPEG, PNG, SVG, WebP, GIF) on web pages.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;img src=&quot;URL&quot; alt=&quot;Description&quot; width=&quot;px&quot; height=&quot;px&quot;&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;img src=&quot;vtu-logo.png&quot; alt=&quot;VTU Official Logo&quot; width=&quot;120&quot; height=&quot;120&quot; loading=&quot;lazy&quot;&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a 120x120 pixel image of the VTU logo on the webpage layout.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src</code></td>
+<td>Path location URL of image file resource.</td>
+<td>Relative or absolute URL</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>alt</code></td>
+<td>Accessible fallback text description for screen readers or broken links.</td>
+<td>Descriptive text string</td>
+<td>Mandatory (for Accessibility)</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>Display width in pixels.</td>
+<td>Integer pixels</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Display height in pixels.</td>
+<td>Integer pixels</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>loading</code></td>
+<td>Configures browser image loading performance strategy.</td>
+<td><code>lazy</code> (loads when near viewport), <code>eager</code> (loads immediately)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>srcset</code></td>
+<td>List of image sources for responsive pixel densities.</td>
+<td>Candidate image URLs with width/density descriptors</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>sizes</code></td>
+<td>Image layout sizes for responsive srcset evaluation.</td>
+<td>Media condition size strings</td>
+<td>Optional with srcset</td>
+</tr>
+<tr>
+<td><code>decoding</code></td>
+<td>Hints browser on image decoding mode.</td>
+<td><code>async</code>, <code>sync</code>, <code>auto</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>fetchpriority</code></td>
+<td>Sets download priority hint for browser preloader.</td>
+<td><code>high</code>, <code>low</code>, <code>auto</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>usemap</code></td>
+<td>Associates image with an interactive <code>&lt;map&gt;</code> element.</td>
+<td><code>#mapname</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>ismap</code></td>
+<td>Specifies image as a server-side image map.</td>
+<td><code>ismap</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>crossorigin</code></td>
+<td>Configures CORS request settings.</td>
+<td><code>anonymous</code>, <code>use-credentials</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>referrerpolicy</code></td>
+<td>Specifies referrer policy when fetching image.</td>
+<td><code>no-referrer</code>, <code>strict-origin</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>align</code> / <code>border</code> / <code>hspace</code> / <code>vspace</code> / <code>name</code></td>
+<td>Presentation attributes.</td>
+<td>Various</td>
+<td>Obsolete in HTML5</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;img src=&quot;avatar.jpg&quot; alt=&quot;Student Profile Picture&quot; width=&quot;150&quot; height=&quot;150&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; class=&quot;rounded-circle&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for website logos, user profile avatars, product photos, and diagram figures.</li>
+</ul>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;img src=&quot;graph.png&quot; alt=&quot;Data Structure Chart&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;
+&lt;/figure&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Always provide a descriptive <code>alt</code> attribute. If image is purely decorative, use <code>alt=&quot;&quot;</code>.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;picture&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Core media tag.</p>
+<hr>
+<h3>2.6 <code>&lt;strong and em&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;strong and em&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;strong&gt;...&lt;/strong&gt; and &lt;em&gt;...&lt;/em&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Inline Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p><code>&lt;strong&gt;</code> indicates strong semantic importance. <code>&lt;em&gt;</code> indicates vocal stress emphasis.</p>
+<h4>3. Purpose / Function</h4>
+<p><code>&lt;strong&gt;</code> renders text in bold to signal critical urgency. <code>&lt;em&gt;</code> renders text in italics to signal verbal emphasis.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;strong&gt;Important Text&lt;/strong&gt;
+&lt;em&gt;Emphasized Text&lt;/em&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Submission deadline is &lt;em&gt;today&lt;/em&gt; before 12:00 PM.&lt;/p&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders &quot;WARNING:&quot; in <strong>bold</strong> and &quot;today&quot; in <em>italics</em>. Screen readers pronounce <code>&lt;em&gt;</code> with elevated emphasis.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Global Attributes</td>
+<td>Standard global attributes (<code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, <code>dir</code>, <code>lang</code>, <code>hidden</code>).</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;strong id=&quot;warn-msg&quot; class=&quot;text-danger&quot; title=&quot;Important Notice&quot;&gt;Exam Hall Ticket Required!&lt;/strong&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used in documentation warnings, key search terms, and emphasis in text body.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Always save your file before compiling.&lt;/p&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p><code>&lt;strong&gt;</code> vs <code>&lt;b&gt;</code>: <code>&lt;b&gt;</code> is purely visual bold; <code>&lt;strong&gt;</code> means semantic importance. <code>&lt;em&gt;</code> vs <code>&lt;i&gt;</code>: <code>&lt;i&gt;</code> is visual italic; <code>&lt;em&gt;</code> is vocal stress.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;mark&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Preferred semantic tags.</p>
+<hr>
+<h1>MODULE 3: LIST TAGS</h1>
+<h3>3.1 <code>&lt;ul and ol&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;ul and ol&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;ul&gt;...&lt;/ul&gt; and &lt;ol&gt;...&lt;/ol&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p><code>&lt;ul&gt;</code> defines an unordered bulleted list. <code>&lt;ol&gt;</code> defines an ordered numbered list. Each item inside is enclosed in <code>&lt;li&gt;</code> (List Item).</p>
+<h4>3. Purpose / Function</h4>
+<p>Groups related items sequentially (ordered sequence) or un-ordered (bullet points).</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;h3&gt;Required Tools:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;VS Code IDE&lt;/li&gt;
+  &lt;li&gt;Node.js Engine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Lab Execution Steps:&lt;/h3&gt;
+&lt;ol type=&quot;1&quot; start=&quot;1&quot;&gt;
+  &lt;li&gt;Write HTML Code&lt;/li&gt;
+  &lt;li&gt;Open in Chrome Browser&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a bulleted list of tools and a numbered list (1, 2) of execution steps.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;ol&gt;</code></td>
+<td><code>type</code></td>
+<td>Numbering type style.</td>
+<td><code>1</code> (numbers), <code>A</code> (uppercase alpha), <code>a</code> (lowercase alpha), <code>I</code> (uppercase Roman), <code>i</code> (lowercase Roman)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;ol&gt;</code></td>
+<td><code>start</code></td>
+<td>Starting integer number value for list ordering.</td>
+<td>Integer number</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;ol&gt;</code></td>
+<td><code>reversed</code></td>
+<td>Reverses list ordering sequence.</td>
+<td><code>reversed</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;li&gt;</code></td>
+<td><code>value</code></td>
+<td>Sets explicit integer value for current item inside <code>&lt;ol&gt;</code>.</td>
+<td>Integer number</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;ul&gt;</code></td>
+<td><code>type</code></td>
+<td>Bullet marker shape (Obsolete).</td>
+<td><code>disc</code>, <code>circle</code>, <code>square</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>&lt;ol&gt;</code></td>
+<td><code>compact</code></td>
+<td>Compact display layout (Obsolete).</td>
+<td><code>compact</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;ol type=&quot;I&quot; start=&quot;1&quot; reversed class=&quot;syllabus-list&quot;&gt;
+  &lt;li value=&quot;5&quot;&gt;Step 5&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for navigation menus (<code>&lt;ul&gt;</code>), recipe steps (<code>&lt;ol&gt;</code>), and dropdown lists.</li>
+</ul>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Direct children of <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> MUST ONLY be <code>&lt;li&gt;</code> elements.</p>
+<h4>11. Related Tags</h4>
+<p>Contains <code>&lt;li&gt;</code>. Related to <code>&lt;dl&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> <code>type</code> attribute on <code>&lt;ul&gt;</code> (<code>disc</code>, <code>circle</code>) is deprecated in HTML5; use CSS <code>list-style-type</code> instead.</p>
+<hr>
+<h3>3.2 <code>&lt;dl, dt, dd&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;dl, dt, dd&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;dl&gt;&lt;dt&gt;...&lt;/dt&gt;&lt;dd&gt;...&lt;/dd&gt;&lt;/dl&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;dl&gt;</code> tag defines a description list. <code>&lt;dt&gt;</code> specifies the term/name, and <code>&lt;dd&gt;</code> specifies the description/value of that term.</p>
+<h4>3. Purpose / Function</h4>
+<p>Used to display glossaries, dictionary definitions, or key-value metadata pairs. <em>(Frequently asked in 10-mark exam questions)</em>.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;Term 1&lt;/dt&gt;
+  &lt;dd&gt;Description 1&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language - Standard language for web documents.&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets - Language for document presentation styling.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders terms &quot;HTML&quot; and &quot;CSS&quot; in bold text, followed by indented description lines beneath each term.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Global Attributes</td>
+<td>Standard global attributes (<code>id</code>, <code>class</code>, <code>style</code>, <code>dir</code>, <code>lang</code>).</td>
+<td>Standard global values</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;dl id=&quot;tech-glossary&quot; class=&quot;row&quot;&gt;
+  &lt;dt class=&quot;col-sm-3&quot;&gt;Course Code&lt;/dt&gt;
+  &lt;dd class=&quot;col-sm-9&quot;&gt;18CS52&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for FAQs, glossary definitions, metadata terms, and key-value specs.</li>
+</ul>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;Author&lt;/dt&gt;&lt;dd&gt;Tim Berners-Lee&lt;/dd&gt;
+  &lt;dt&gt;Year&lt;/dt&gt;&lt;dd&gt;1991&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Each <code>&lt;dt&gt;</code> can have one or multiple matching <code>&lt;dd&gt;</code> description tags.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Core semantic list structure.</p>
+<hr>
+<h1>MODULE 4: TABLES (LAB VIVA &amp; EXAMINATION CORE)</h1>
+<h3>4.1 <code>&lt;table, tr, th, td, caption&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;table, tr, th, td, caption&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;table&gt;...&lt;/table&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;table&gt;</code> element represents data in a two-dimensional grid of rows (<code>&lt;tr&gt;</code>) and cells (<code>&lt;th&gt;</code> header cell, <code>&lt;td&gt;</code> data cell), with an optional title caption (<code>&lt;caption&gt;</code>).</p>
+<h4>3. Purpose / Function</h4>
+<p>Presents structured tabular data (schedules, grade sheets, database rows).</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;caption&gt;Title&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;table border=&quot;1&quot;&gt;
+  &lt;caption&gt;CSE Semester 3 Timetable&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;USN&lt;/th&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Marks (Theory + Lab)&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1VU22CS001&lt;/td&gt;
+    &lt;td&gt;Aryansh&lt;/td&gt;
+    &lt;td&gt;48&lt;/td&gt;
+    &lt;td&gt;98&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a 2-row table grid with borderlines, bold centered column headers, and merged header cell spanning across two columns.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;th&gt;</code> / <code>&lt;td&gt;</code></td>
+<td><code>colspan</code></td>
+<td>Merges <em>n</em> adjacent columns horizontally.</td>
+<td>Positive integer number (<code>1</code>, <code>2</code>, <code>3</code>)</td>
+<td>Highly Tested in Exams</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code> / <code>&lt;td&gt;</code></td>
+<td><code>rowspan</code></td>
+<td>Merges <em>n</em> adjacent rows vertically.</td>
+<td>Positive integer number (<code>1</code>, <code>2</code>, <code>3</code>)</td>
+<td>Highly Tested in Exams</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code></td>
+<td><code>scope</code></td>
+<td>Associates header cell with columns or rows.</td>
+<td><code>col</code>, <code>row</code>, <code>colgroup</code>, <code>rowgroup</code></td>
+<td>Accessibility Best Practice</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code> / <code>&lt;td&gt;</code></td>
+<td><code>headers</code></td>
+<td>Associates cell with explicit header ID string.</td>
+<td>Header ID string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;th&gt;</code></td>
+<td><code>abbr</code></td>
+<td>Short abbreviation text for screen readers.</td>
+<td>Abbreviation string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td><code>border</code></td>
+<td>Table border width (Only <code>1</code> or empty in HTML5).</td>
+<td><code>1</code> or <code>&quot;&quot;</code></td>
+<td>Optional (Use CSS)</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td><code>cellpadding</code></td>
+<td>Cell internal padding (Obsolete).</td>
+<td>Integer pixels</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td><code>cellspacing</code></td>
+<td>Cell border spacing (Obsolete).</td>
+<td>Integer pixels</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td><code>width</code> / <code>height</code></td>
+<td>Table dimensions (Obsolete).</td>
+<td>Pixels / percentage</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code> / <code>&lt;tr&gt;</code> / <code>&lt;th&gt;</code> / <code>&lt;td&gt;</code></td>
+<td><code>align</code> / <code>valign</code></td>
+<td>Alignment (Obsolete).</td>
+<td><code>left</code>, <code>center</code>, <code>right</code>, <code>top</code>, <code>middle</code>, <code>bottom</code></td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td><code>bgcolor</code></td>
+<td>Background color (Obsolete).</td>
+<td>Color hex/name</td>
+<td>Obsolete (Use CSS)</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;td rowspan=&quot;2&quot; colspan=&quot;2&quot; headers=&quot;th-marks&quot; class=&quot;bg-warning&quot;&gt;Merged Cell&lt;/td&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for grade reports, examination timetables, product pricing tables, and financial data grids.</li>
+</ul>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Do NOT use tables for page layout! Use CSS Flexbox/Grid for layout, and <code>&lt;table&gt;</code> ONLY for tabular data.</p>
+<h4>11. Related Tags</h4>
+<p>Contains <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Layout presentation attributes (<code>cellpadding</code>, <code>cellspacing</code>, <code>width</code>, <code>bgcolor</code>, <code>align</code>) are obsolete in HTML5; use CSS styling instead.</p>
+<hr>
+<h1>MODULE 5: FORMS AND INPUT CONTROLS (HIGHEST EXAM WEIGHTAGE)</h1>
+<h3>5.1 <code>&lt;form&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;form&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;form&gt;...&lt;/form&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;form&gt;</code> element defines an interactive HTML form used to collect user inputs and send the data payload to a processing web server.</p>
+<h4>3. Purpose / Function</h4>
+<p>Acts as the primary wrapper control holding input fields, textareas, checkboxes, dropdowns, and submit buttons.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;form action=&quot;server-endpoint&quot; method=&quot;POST&quot;&gt;
+  &lt;!-- Form controls --&gt;
+&lt;/form&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;form action=&quot;/submit-student.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; autocomplete=&quot;on&quot;&gt;
+  &lt;label for=&quot;usn&quot;&gt;USN:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;usn&quot; name=&quot;student_usn&quot; required&gt;
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders an interactive form containing a text input field and a clickable submit button.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>action</code></td>
+<td>URL of server script endpoint that processes form data.</td>
+<td>URL string (<code>/submit.php</code>, <code>https://...</code>)</td>
+<td>Mandatory for submission</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td>HTTP submission method.</td>
+<td><code>GET</code> (appends in URL query), <code>POST</code> (sends in HTTP body payload), <code>dialog</code></td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>enctype</code></td>
+<td>Encoding type for form submission payload.</td>
+<td><code>application/x-www-form-urlencoded</code> (default), <code>multipart/form-data</code> (for file uploads), <code>text/plain</code></td>
+<td>Required for File Uploads</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Target browsing context window for receiving submission response.</td>
+<td><code>_self</code>, <code>_blank</code>, <code>_parent</code>, <code>_top</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>autocomplete</code></td>
+<td>Toggles browser auto-fill for all child inputs.</td>
+<td><code>on</code>, <code>off</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>novalidate</code></td>
+<td>Disables native HTML5 browser form validation checks.</td>
+<td><code>novalidate</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Unique name identifier for form.</td>
+<td>Name string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>rel</code></td>
+<td>Relationship of form submit link target.</td>
+<td><code>external</code>, <code>help</code>, <code>license</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>accept-charset</code></td>
+<td>Character encodings accepted by server.</td>
+<td><code>UTF-8</code></td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;form action=&quot;/upload&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; autocomplete=&quot;on&quot; novalidate class=&quot;card p-4&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for user registration forms, login screens, search bars, checkout forms, and surveys.</li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;/api/v1/register&quot; method=&quot;POST&quot;&gt;
+  &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Register&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Difference between <code>GET</code> and <code>POST</code> is a classic 5-mark exam question! <code>GET</code> is bookmarkable and exposes data in URL bar; <code>POST</code> is secure and handles large payload/file uploads.</p>
+<h4>11. Related Tags</h4>
+<p>Contains <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;fieldset&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Core web form container.</p>
+<hr>
+<h3>5.2 <code>&lt;input&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;input&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;input&gt;</code></li>
+<li><strong>Tag Type:</strong> Void / Self-Closing Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;input&gt;</code> element is the most vital interactive form control, allowing users to enter data in various formats specified by the <code>type</code> attribute.</p>
+<h4>3. Purpose / Function</h4>
+<p>Renders text boxes, password fields, radio buttons, checkboxes, file upload pickers, date pickers, range sliders, and submit buttons.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;input type=&quot;type_name&quot; name=&quot;variable_name&quot; value=&quot;val&quot;&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;p&gt;USN: &lt;input type=&quot;text&quot; name=&quot;usn&quot; placeholder=&quot;1VU22CS001&quot; required&gt;&lt;/p&gt;
+&lt;p&gt;Password: &lt;input type=&quot;password&quot; name=&quot;pass&quot; required&gt;&lt;/p&gt;
+&lt;p&gt;Gender: &lt;input type=&quot;radio&quot; name=&quot;g&quot; value=&quot;m&quot; checked&gt; M &lt;input type=&quot;radio&quot; name=&quot;g&quot; value=&quot;f&quot;&gt; F&lt;/p&gt;
+&lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Register&quot;&gt;&lt;/p&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a text box with placeholder, a masked password field, two radio buttons (male pre-checked), and a submit button.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>type</code></td>
+<td>Type of interactive input control to render.</td>
+<td><code>text</code>, <code>password</code>, <code>email</code>, <code>number</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, <code>hidden</code>, <code>submit</code>, <code>reset</code>, <code>button</code>, <code>date</code>, <code>time</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>color</code>, <code>range</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>image</code></td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Field variable key name submitted in HTTP payload.</td>
+<td>Variable name string</td>
+<td>Mandatory for Server Submission</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Initial or submitted data value string.</td>
+<td>Value string</td>
+<td>Required for radio/checkbox/submit</td>
+</tr>
+<tr>
+<td><code>placeholder</code></td>
+<td>Short hint text displayed inside empty text box.</td>
+<td>Hint string</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Mandates field completion before submission.</td>
+<td><code>required</code></td>
+<td>Mandatory for required inputs</td>
+</tr>
+<tr>
+<td><code>readonly</code></td>
+<td>Prevents user modification while remaining selectable.</td>
+<td><code>readonly</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Deactivates control and excludes it from payload.</td>
+<td><code>disabled</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>checked</code></td>
+<td>Pre-checks radio button or checkbox control.</td>
+<td><code>checked</code></td>
+<td>Optional (radio/checkbox)</td>
+</tr>
+<tr>
+<td><code>pattern</code></td>
+<td>Regular Expression (RegEx) string for format validation.</td>
+<td>Regex pattern string (<code>[A-Z]{3}[0-9]{3}</code>)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>minlength</code> / <code>maxlength</code></td>
+<td>Specifies character length boundaries.</td>
+<td>Positive integer number</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>min</code> / <code>max</code> / <code>step</code></td>
+<td>Specifies numeric or date range boundaries and step increment.</td>
+<td>Number or date string</td>
+<td>Optional (number/range/date)</td>
+</tr>
+<tr>
+<td><code>accept</code></td>
+<td>Specifies accepted file extensions/MIME types.</td>
+<td><code>.pdf,.zip</code>, <code>image/*</code></td>
+<td>Optional (file type)</td>
+</tr>
+<tr>
+<td><code>multiple</code></td>
+<td>Allows selecting multiple files or email addresses.</td>
+<td><code>multiple</code></td>
+<td>Optional (file/email)</td>
+</tr>
+<tr>
+<td><code>autocomplete</code></td>
+<td>Enables browser auto-fill for this specific input.</td>
+<td><code>on</code>, <code>off</code>, <code>username</code>, <code>current-password</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>autofocus</code></td>
+<td>Automatically focuses input on page load.</td>
+<td><code>autofocus</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>list</code></td>
+<td>Associates input with a <code>&lt;datalist&gt;</code> element ID.</td>
+<td>Datalist ID string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>form</code></td>
+<td>Binds input to an external form ID outside parent form.</td>
+<td>Form ID string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>formaction</code> / <code>formmethod</code> / <code>formenctype</code> / <code>formnovalidate</code> / <code>formtarget</code></td>
+<td>Overrides parent form submission attributes for submit buttons.</td>
+<td>Various</td>
+<td>Optional (submit buttons)</td>
+</tr>
+<tr>
+<td><code>src</code> / <code>alt</code> / <code>width</code> / <code>height</code></td>
+<td>Image properties for <code>type=&quot;image&quot;</code>.</td>
+<td>Image paths/dimensions</td>
+<td>Optional (<code>type=&quot;image&quot;</code>)</td>
+</tr>
+<tr>
+<td><code>capture</code></td>
+<td>Specifies media capture camera/mic for mobile upload.</td>
+<td><code>user</code>, <code>environment</code></td>
+<td>Optional (<code>type=&quot;file&quot;</code>)</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; name=&quot;user_email&quot; id=&quot;user_email&quot; class=&quot;form-control&quot; placeholder=&quot;user@college.edu&quot; required autocomplete=&quot;email&quot; autofocus&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used across all forms on the internet for data input collection.</li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; name=&quot;assignment&quot; accept=&quot;.pdf,.zip&quot; multiple required&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Input controls without a <code>name</code> attribute will NOT be submitted to the server during form POST/GET!</p>
+<h4>11. Related Tags</h4>
+<p>Paired with <code>&lt;label for=&quot;...&quot;&gt;</code>. Container is <code>&lt;form&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> HTML5 added new input types (<code>email</code>, <code>url</code>, <code>number</code>, <code>range</code>, <code>date</code>, <code>color</code>, <code>search</code>).</p>
+<hr>
+<h3>5.3 <code>&lt;label&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;label&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;label for=&quot;id&quot;&gt;...&lt;/label&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;label&gt;</code> element represents a caption for an item in a user interface.</p>
+<h4>3. Purpose / Function</h4>
+<p>Improves web accessibility for screen readers and increases clickable hit target area for radio buttons and checkboxes.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;label for=&quot;target_input_id&quot;&gt;Label Text&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;target_input_id&quot; name=&quot;var&quot;&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;label for=&quot;usn_field&quot;&gt;Student USN:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;usn_field&quot; name=&quot;usn&quot;&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders text &quot;Student USN:&quot;. Clicking the text &quot;Student USN:&quot; automatically focuses the text cursor inside the input field.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>for</code></td>
+<td>Specifies the <code>id</code> of the target input element this label belongs to.</td>
+<td>Target Input ID string</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>form</code></td>
+<td>Associates label with an external form ID.</td>
+<td>Form ID string</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;label for=&quot;agree_check&quot; class=&quot;form-check-label&quot;&gt;I agree to terms&lt;/label&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Mandatory web accessibility standard on every form input.</li>
+</ul>
+<pre><code class="language-html">&lt;label for=&quot;pass&quot;&gt;Password:&lt;/label&gt;
+&lt;input type=&quot;password&quot; id=&quot;pass&quot; name=&quot;password&quot;&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>The <code>for</code> attribute value MUST match the target input&#39;s <code>id</code> attribute value exactly!</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Accessibility core tag.</p>
+<hr>
+<h3>5.4 <code>&lt;select and option&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;select and option&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;select&gt;&lt;option&gt;...&lt;/option&gt;&lt;/select&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;select&gt;</code> element defines a drop-down menu list. The <code>&lt;option&gt;</code> elements define the selectable list items.</p>
+<h4>3. Purpose / Function</h4>
+<p>Provides a drop-down menu for users to select one (or multiple) choices from a defined set of options.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;select name=&quot;var&quot;&gt;
+  &lt;option value=&quot;val1&quot;&gt;Label 1&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;label for=&quot;branch&quot;&gt;Select Branch:&lt;/label&gt;
+&lt;select id=&quot;branch&quot; name=&quot;student_branch&quot; required&gt;
+  &lt;option value=&quot;&quot; disabled selected&gt;-- Choose Branch --&lt;/option&gt;
+  &lt;option value=&quot;cse&quot;&gt;Computer Science (CSE)&lt;/option&gt;
+  &lt;option value=&quot;ise&quot;&gt;Information Science (ISE)&lt;/option&gt;
+  &lt;option value=&quot;ece&quot;&gt;Electronics (ECE)&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a drop-down menu displaying selectable engineering branches.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>name</code></td>
+<td>Field variable key sent in HTTP payload.</td>
+<td>Variable name string</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>multiple</code></td>
+<td>Allows selecting multiple options simultaneously.</td>
+<td><code>multiple</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>size</code></td>
+<td>Specifies visible height count of dropdown list lines.</td>
+<td>Positive integer</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>required</code></td>
+<td>Mandates option selection before form submission.</td>
+<td><code>required</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>disabled</code></td>
+<td>Deactivates dropdown selection control.</td>
+<td><code>disabled</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>autofocus</code></td>
+<td>Focuses dropdown automatically on page load.</td>
+<td><code>autofocus</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td><code>form</code></td>
+<td>Associates select box with an external form ID.</td>
+<td>Form ID string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;option&gt;</code></td>
+<td><code>value</code></td>
+<td>Data payload value string submitted when selected.</td>
+<td>Value string</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>&lt;option&gt;</code></td>
+<td><code>selected</code></td>
+<td>Sets option as default pre-selected item on load.</td>
+<td><code>selected</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;option&gt;</code></td>
+<td><code>disabled</code></td>
+<td>Deactivates option from selection.</td>
+<td><code>disabled</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>&lt;option&gt;</code></td>
+<td><code>label</code></td>
+<td>Short label text for option element.</td>
+<td>Label string</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;select name=&quot;course&quot; id=&quot;course&quot; class=&quot;form-select&quot; required size=&quot;1&quot;&gt;
+  &lt;option value=&quot;3&quot; selected&gt;Semester 3&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for country pickers, branch selectors, payment method dropdowns, and state lists.</li>
+</ul>
+<pre><code class="language-html">&lt;select name=&quot;sem&quot;&gt;
+  &lt;option value=&quot;3&quot; selected&gt;Semester 3&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>If an <code>&lt;option&gt;</code> has no <code>value</code> attribute specified, the text inside option is sent to server as value.</p>
+<h4>11. Related Tags</h4>
+<p>Parent <code>&lt;select&gt;</code>, child <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Standard dropdown control.</p>
+<hr>
+<h3>5.5 <code>&lt;textarea&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;textarea&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;textarea&gt;...&lt;/textarea&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;textarea&gt;</code> element represents a multi-line plain-text editing control.</p>
+<h4>3. Purpose / Function</h4>
+<p>Allows users to enter large multi-line text input (comments, addresses, feedback, long answers).</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;textarea name=&quot;var&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;Default text&lt;/textarea&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;label for=&quot;feedback&quot;&gt;Student Remarks:&lt;/label&gt;&lt;br&gt;
+&lt;textarea id=&quot;feedback&quot; name=&quot;remarks&quot; rows=&quot;4&quot; cols=&quot;40&quot; placeholder=&quot;Enter comments here...&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a 4-row by 40-column resizable multi-line text box with placeholder text.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>name</code></td>
+<td>Field variable key for server submission payload.</td>
+<td>Variable name string</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>rows</code></td>
+<td>Visible height of text area in text lines count.</td>
+<td>Positive integer number</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>cols</code></td>
+<td>Visible width of text area in average character widths.</td>
+<td>Positive integer number</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>placeholder</code></td>
+<td>Hint text shown inside empty text box.</td>
+<td>Hint string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Mandates field completion before form submission.</td>
+<td><code>required</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>readonly</code></td>
+<td>Prevents text editing while remaining selectable.</td>
+<td><code>readonly</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Deactivates text area control.</td>
+<td><code>disabled</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>minlength</code> / <code>maxlength</code></td>
+<td>Specifies character length boundaries.</td>
+<td>Positive integer number</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>wrap</code></td>
+<td>Controls text wrapping on submission (<code>soft</code> default, <code>hard</code> inserts newlines).</td>
+<td><code>soft</code>, <code>hard</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>autofocus</code></td>
+<td>Focuses text area on page load.</td>
+<td><code>autofocus</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>form</code></td>
+<td>Associates text area with an external form ID.</td>
+<td>Form ID string</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;textarea name=&quot;bio&quot; id=&quot;bio&quot; class=&quot;form-control&quot; rows=&quot;3&quot; cols=&quot;50&quot; placeholder=&quot;Short Bio&quot; maxlength=&quot;500&quot; required&gt;&lt;/textarea&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for comment sections, feedback forms, essay submissions, and address fields.</li>
+</ul>
+<pre><code class="language-html">&lt;textarea name=&quot;code_submission&quot; rows=&quot;10&quot; cols=&quot;80&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Default initial text must be placed BETWEEN <code>&lt;textarea&gt;</code> and <code>&lt;/textarea&gt;</code>, NOT inside a <code>value</code> attribute!</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;input&gt;</code>, <code>&lt;form&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Standard multi-line input tag.</p>
+<hr>
+<h1>MODULE 6: SEMANTIC LAYOUT TAGS (HTML5 CORE)</h1>
+<h3>6.1 <code>&lt;header, footer, main, section, article, aside, nav&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;header, footer, main, section, article, aside, nav&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;semantic-tag&gt;...&lt;/semantic-tag&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p>HTML5 semantic layout elements give clear meaning to web page structures, replacing generic non-semantic <code>&lt;div&gt;</code> tags with meaningful layout landmarks.</p>
+<h4>3. Purpose / Function</h4>
+<p>Improves website SEO, page structure organization, readability, and accessibility for screen reader assistive software.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;header&gt;Nav &amp; Title&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;Content&lt;/article&gt;
+  &lt;/section&gt;
+  &lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Copyright&lt;/footer&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;VTU CSE Department&lt;/h1&gt;
+  &lt;nav aria-label=&quot;Main Menu&quot;&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main id=&quot;main-content&quot; role=&quot;main&quot;&gt;
+  &lt;section id=&quot;assignment&quot;&gt;
+    &lt;h2&gt;Web Tech Assignment&lt;/h2&gt;
+    &lt;p&gt;Complete all module questions.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2026 VTU. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders structured page layout with header banner at top, main section in middle, and footer banner at bottom.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Tag Name</th>
+<th>Semantic Purpose &amp; Function</th>
+<th>Common Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;header&gt;</code></td>
+<td>Introductory branding, site logo, title &amp; navigation.</td>
+<td>Top bar header of website or article header.</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>Major section containing primary navigation links.</td>
+<td>Top navbar, menu list links.</td>
+</tr>
+<tr>
+<td><code>&lt;main&gt;</code></td>
+<td>Unique primary landmark content area of the document.</td>
+<td>Main body content (Only 1 per page).</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>Standalone thematic section with a heading.</td>
+<td>Landing page sections (Features, Pricing, Contact).</td>
+</tr>
+<tr>
+<td><code>&lt;article&gt;</code></td>
+<td>Self-contained, independently distributable content unit.</td>
+<td>Blog posts, news articles, forum comments.</td>
+</tr>
+<tr>
+<td><code>&lt;aside&gt;</code></td>
+<td>Content indirectly related to main content.</td>
+<td>Blog sidebars, callout boxes, advertisements.</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>Footer for page or section (copyright, contact).</td>
+<td>Bottom site footer, copyright notice.</td>
+</tr>
+<tr>
+<td>Global Attributes</td>
+<td>Standard global attributes (<code>id</code>, <code>class</code>, <code>style</code>, <code>role</code>, <code>aria-label</code>, <code>hidden</code>).</td>
+<td>Standard global values</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;main id=&quot;main-content&quot; role=&quot;main&quot; aria-label=&quot;Primary Content&quot; class=&quot;container py-4&quot;&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used on 100% of modern HTML5 websites to build clean semantic document layouts.</li>
+</ul>
+<pre><code class="language-html">&lt;header&gt;&lt;nav&gt;Links&lt;/nav&gt;&lt;/header&gt;
+&lt;main&gt;&lt;article&gt;Post&lt;/article&gt;&lt;/main&gt;
+&lt;footer&gt;Copyright&lt;/footer&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p><code>&lt;div&gt;</code> vs Semantic Tags: <code>&lt;div&gt;</code> has ZERO semantic meaning (used only for CSS styling). <code>&lt;section&gt;</code> and <code>&lt;article&gt;</code> tell search engines what the content actually represents.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Native HTML5 landmark elements.</p>
+<hr>
+<h3>6.2 <code>&lt;div and span&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;div and span&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;div&gt;...&lt;/div&gt; and &lt;span&gt;...&lt;/span&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p><code>&lt;div&gt;</code> (Content Division) is a generic <strong>block-level</strong> container. <code>&lt;span&gt;</code> is a generic <strong>inline</strong> container. Neither carries semantic meaning.</p>
+<h4>3. Purpose / Function</h4>
+<p>Used to group elements or text fragments for CSS styling (colors, layout) or JavaScript DOM manipulation when no semantic tag applies.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;div class=&quot;box&quot;&gt;
+  &lt;p&gt;Text with &lt;span class=&quot;highlight&quot;&gt;colored&lt;/span&gt; word.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;div style=&quot;background-color: #f1f5f9; padding: 15px; border-radius: 5px;&quot;&gt;
+  &lt;h3&gt;Notification&lt;/h3&gt;
+  &lt;p&gt;Status: &lt;span style=&quot;color: green; font-weight: bold;&quot;&gt;PASSED&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a full-width grey background box containing heading and text with the word &quot;PASSED&quot; highlighted in bold green font.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>&lt;div&gt;</code> Tag</th>
+<th><code>&lt;span&gt;</code> Tag</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Display Mode</strong></td>
+<td><code>display: block;</code></td>
+<td><code>display: inline;</code></td>
+</tr>
+<tr>
+<td><strong>Line Break</strong></td>
+<td>Forces new line before and after.</td>
+<td>Fits inline inside surrounding text.</td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>Takes 100% full container width.</td>
+<td>Occupies ONLY as much width as text needs.</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Layout wrappers, card boxes, grid rows.</td>
+<td>Highlighting text words, badge labels, icons.</td>
+</tr>
+<tr>
+<td>Global Attributes</td>
+<td>Full support (<code>id</code>, <code>class</code>, <code>style</code>, <code>title</code>, <code>dir</code>, <code>lang</code>, <code>hidden</code>, <code>tabindex</code>, <code>contenteditable</code>, <code>draggable</code>, <code>data-*</code>, <code>role</code>, <code>aria-*</code>).</td>
+<td>Standard global values</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;div id=&quot;card-1&quot; class=&quot;row&quot; data-card-id=&quot;101&quot; role=&quot;region&quot; tabindex=&quot;0&quot;&gt;
+  &lt;span class=&quot;badge bg-primary&quot; data-status=&quot;new&quot;&gt;New&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used extensively in CSS Flexbox/Grid layouts, card components, and inline text formatting.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;card&quot;&gt;
+  &lt;p&gt;Price: &lt;span class=&quot;price&quot;&gt;$99&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Use semantic tags (<code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>) whenever possible, and reserve <code>&lt;div&gt;</code>/<code>&lt;span&gt;</code> strictly for CSS styling and JS hooks.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;p&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Generic structural wrappers.</p>
+<hr>
+<h1>MODULE 7: MULTIMEDIA, INTERACTIVE &amp; SCRIPTING TAGS</h1>
+<h3>7.1 <code>&lt;audio and video&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;audio and video&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;video&gt;...&lt;/video&gt; and &lt;audio&gt;...&lt;/audio&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Container Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> tags embed native video clips and audio streams into an HTML document without requiring third-party plugins (like Flash).</p>
+<h4>3. Purpose / Function</h4>
+<p>Plays video files (MP4, WebM) and audio files (MP3, WAV) natively in browser pages.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;video src=&quot;file.mp4&quot; controls width=&quot;400&quot;&gt;&lt;/video&gt;
+&lt;audio src=&quot;file.mp3&quot; controls&gt;&lt;/audio&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls poster=&quot;thumbnail.jpg&quot; preload=&quot;metadata&quot;&gt;
+  &lt;source src=&quot;lecture.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;lecture.webm&quot; type=&quot;video/webm&quot;&gt;
+  Your browser does not support HTML5 video.
+&lt;/video&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders a video player box with media playback controls (Play, Pause, Volume, Fullscreen) displaying thumbnail image.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src</code></td>
+<td>Direct path URL of media file.</td>
+<td>URL string</td>
+<td>Optional (if <code>&lt;source&gt;</code> used)</td>
+</tr>
+<tr>
+<td><code>controls</code></td>
+<td>Displays browser native playback controls.</td>
+<td><code>controls</code></td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>autoplay</code></td>
+<td>Plays media automatically on page load.</td>
+<td><code>autoplay</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>Automatically restarts media playback when finished.</td>
+<td><code>loop</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>muted</code></td>
+<td>Mutes audio output by default.</td>
+<td><code>muted</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>preload</code></td>
+<td>Hints browser on media preloading strategy.</td>
+<td><code>auto</code> (preloads full media), <code>metadata</code> (preloads duration/dimensions), <code>none</code></td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>poster</code> (in video)</td>
+<td>Thumbnail image URL displayed before play.</td>
+<td>Image URL string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>width</code> / <code>height</code> (in video)</td>
+<td>Display dimensions in pixels.</td>
+<td>Integer pixels</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>playsinline</code> (in video)</td>
+<td>Plays inline on mobile iOS without fullscreen.</td>
+<td><code>playsinline</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>crossorigin</code></td>
+<td>Configures CORS request settings.</td>
+<td><code>anonymous</code>, <code>use-credentials</code></td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;video controls autoplay muted loop preload=&quot;metadata&quot; poster=&quot;preview.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot; playsinline&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used on video streaming portals (YouTube, Netflix), podcast hosts, and course portals.</li>
+</ul>
+<pre><code class="language-html">&lt;audio controls preload=&quot;none&quot;&gt;
+  &lt;source src=&quot;podcast.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Always include <code>&lt;source&gt;</code> tags with multiple video formats (MP4, WebM) inside <code>&lt;video&gt;</code> for cross-browser fallback support.</p>
+<h4>11. Related Tags</h4>
+<p>Contains <code>&lt;source&gt;</code>, <code>&lt;track&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Native media elements.</p>
+<hr>
+<h3>7.2 <code>&lt;iframe&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;iframe&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;iframe&gt;&lt;/iframe&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Tag</li>
+</ul>
+<h4>2. Definition</h4>
+<p>The <code>&lt;iframe&gt;</code> (Inline Frame) element is used to embed another HTML document or external webpage inside the current document.</p>
+<h4>3. Purpose / Function</h4>
+<p>Embeds external content such as Google Maps location frames, YouTube video embeds, PDF previews, or payment gateways.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;iframe src=&quot;URL&quot; width=&quot;width&quot; height=&quot;height&quot; title=&quot;desc&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;iframe src=&quot;https://www.youtube.com/embed/dQw4w9WgXcQ&quot; width=&quot;560&quot; height=&quot;315&quot; title=&quot;YouTube video player&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Renders an embedded 560x315 interactive YouTube video window directly on the page.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src</code></td>
+<td>URL location of external webpage or document to embed.</td>
+<td>URL string</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><code>width</code> / <code>height</code></td>
+<td>Display dimensions of iframe window in pixels or %.</td>
+<td>Integer pixels / percentage</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Accessible title description of iframe content.</td>
+<td>Title string</td>
+<td>Mandatory for Accessibility</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Target browsing context window name for target links.</td>
+<td>Name string</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>sandbox</code></td>
+<td>Applies security restrictions to embedded frame.</td>
+<td><code>allow-forms</code>, <code>allow-scripts</code>, <code>allow-same-origin</code>, <code>allow-popups</code>, <code>allow-modals</code>, <code>allow-top-navigation</code></td>
+<td>Security Best Practice</td>
+</tr>
+<tr>
+<td><code>loading</code></td>
+<td>Configures lazy loading performance.</td>
+<td><code>lazy</code>, <code>eager</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>allow</code></td>
+<td>Specifies Feature Policy / Permissions Policy permissions.</td>
+<td><code>camera</code>, <code>microphone</code>, <code>geolocation</code>, <code>fullscreen</code>, <code>autoplay</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>allowfullscreen</code></td>
+<td>Permits iframe to request fullscreen display.</td>
+<td><code>allowfullscreen</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>referrerpolicy</code></td>
+<td>Controls referrer header sent when loading frame.</td>
+<td><code>no-referrer</code>, <code>strict-origin</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>frameborder</code> / <code>marginwidth</code> / <code>marginheight</code> / <code>scrolling</code> / <code>align</code></td>
+<td>Presentation attributes.</td>
+<td>Various</td>
+<td>Obsolete in HTML5</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;iframe src=&quot;map.html&quot; width=&quot;100%&quot; height=&quot;450&quot; title=&quot;Campus Map&quot; loading=&quot;lazy&quot; sandbox=&quot;allow-scripts allow-same-origin&quot; allowfullscreen&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Used for YouTube video embeds, Google Maps widgets, and embedded payment frames (Stripe, Razorpay).</li>
+</ul>
+<pre><code class="language-html">&lt;iframe src=&quot;document.pdf&quot; width=&quot;600&quot; height=&quot;400&quot; title=&quot;PDF Reader&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Always add a <code>title</code> attribute to <code>&lt;iframe&gt;</code> tags so screen readers can describe the embedded content to visually impaired users.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;video&gt;</code>, <code>&lt;a&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Standard embedding frame tag.</p>
+<hr>
+<h3>7.3 <code>&lt;script and noscript&gt;</code></h3>
+<h4>1. Tag Name</h4>
+<ul>
+<li><strong>Tag Name:</strong> <code>&lt;script and noscript&gt;</code></li>
+<li><strong>Opening &amp; Closing Form:</strong> <code>&lt;script&gt;...&lt;/script&gt;</code></li>
+<li><strong>Tag Type:</strong> Paired Tags</li>
+</ul>
+<h4>2. Definition</h4>
+<p><code>&lt;script&gt;</code> embeds dynamic executable JavaScript code or links external script files. <code>&lt;noscript&gt;</code> defines fallback content rendered when JavaScript is disabled.</p>
+<h4>3. Purpose / Function</h4>
+<p><code>&lt;script&gt;</code> adds dynamic interactivity, form validation, and DOM manipulation. <code>&lt;noscript&gt;</code> warns users if JS is turned off.</p>
+<h4>4. Syntax</h4>
+<pre><code class="language-html">&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript.&lt;/noscript&gt;
+</code></pre>
+<h4>5. Basic Example</h4>
+<pre><code class="language-html">&lt;script&gt;
+  function showMessage() {
+    alert(&quot;Assignment Submitted!&quot;);
+  }
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;p style=&quot;color:red;&quot;&gt;JavaScript is required to run this application.&lt;/p&gt;
+&lt;/noscript&gt;
+</code></pre>
+<h4>6. Output</h4>
+<p>Executes JavaScript logic invisibly. Renders warning text ONLY if browser has disabled JavaScript execution.</p>
+<h4>7. Exhaustive Attributes Reference Table</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Valid Values</th>
+<th>Required/Optional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src</code></td>
+<td>Path to external JavaScript file (.js).</td>
+<td>URL string</td>
+<td>Mandatory for external scripts</td>
+</tr>
+<tr>
+<td><code>defer</code></td>
+<td>Downloads script asynchronously and executes ONLY after HTML parsing finishes.</td>
+<td><code>defer</code></td>
+<td>Recommended for Head scripts</td>
+</tr>
+<tr>
+<td><code>async</code></td>
+<td>Downloads script asynchronously and executes immediately when loaded.</td>
+<td><code>async</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>MIME type or script module context.</td>
+<td><code>text/javascript</code>, <code>module</code>, <code>importmap</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>crossorigin</code></td>
+<td>Configures CORS request behavior.</td>
+<td><code>anonymous</code>, <code>use-credentials</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>integrity</code></td>
+<td>Subresource Integrity (SRI) security verification hash string.</td>
+<td>Hash string (<code>sha384-...</code>)</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>nomodule</code></td>
+<td>Prevents script execution in browsers that support ES modules.</td>
+<td><code>nomodule</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>referrerpolicy</code></td>
+<td>Controls referrer header sent when fetching script.</td>
+<td><code>no-referrer</code>, <code>origin</code></td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>Scripting language (Obsolete).</td>
+<td><code>javascript</code></td>
+<td>Obsolete in HTML5</td>
+</tr>
+</tbody></table>
+<h4>8. Attribute Code Example</h4>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.example.com/app.js&quot; defer type=&quot;module&quot; crossorigin=&quot;anonymous&quot; integrity=&quot;sha384-abc&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h4>9. Real-World Case Study / Example</h4>
+<ul>
+<li><strong>Case Study:</strong> Included on every interactive web application to power JavaScript frameworks (React, Vue) and DOM logic.</li>
+</ul>
+<pre><code class="language-html">&lt;script src=&quot;bootstrap.bundle.min.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<h4>10. Important Notes</h4>
+<p>Place external <code>&lt;script&gt;</code> links inside <code>&lt;head&gt;</code> with the <code>defer</code> attribute to prevent blocking HTML parser rendering.</p>
+<h4>11. Related Tags</h4>
+<p>Related to <code>&lt;noscript&gt;</code>, <code>&lt;template&gt;</code>.</p>
+<h4>12. Deprecated / Obsolete Status</h4>
+<p><strong>Standard HTML5 Tag.</strong> Legacy <code>language=&quot;javascript&quot;</code> attribute is obsolete in HTML5.</p>
+<hr>
+<h1>MODULE 8: CSE SYLLABUS THEORY &amp; CONCEPTUAL REFERENCE</h1>
+<hr>
+<h2>8.1 Exhaustive HTML Global Attributes Reference Table</h2>
+<p>Global attributes are attributes that can be used on <strong>any HTML5 element</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Purpose / Function</th>
+<th>Valid Values</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>Unique identifier for an element across the entire DOM tree. Used for CSS styling, JS DOM selection, and URL fragment anchors.</td>
+<td>Unique string</td>
+<td><code>&lt;div id=&quot;header-bar&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Groups multiple elements under common class names for CSS styling and JS selection.</td>
+<td>Space-separated class names</td>
+<td><code>&lt;p class=&quot;lead text-primary&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Applies inline CSS styling rules directly on the element.</td>
+<td>CSS declarations string</td>
+<td><code>&lt;h1 style=&quot;color: blue;&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Provides advisory tooltip text shown when hovering mouse over element.</td>
+<td>Tooltip string</td>
+<td><code>&lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;</code></td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td>Specifies the language code of the element&#39;s text content.</td>
+<td>Language code (<code>en</code>, <code>hi</code>)</td>
+<td><code>&lt;p lang=&quot;fr&quot;&gt;Bonjour&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td>Specifies text directionality.</td>
+<td><code>ltr</code>, <code>rtl</code>, <code>auto</code></td>
+<td><code>&lt;p dir=&quot;rtl&quot;&gt;سلام&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td><code>hidden</code></td>
+<td>Hides element visually from page display.</td>
+<td><code>hidden</code>, <code>until-found</code></td>
+<td><code>&lt;div hidden&gt;Secret&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td><code>tabindex</code></td>
+<td>Controls keyboard Tab key navigation focus order.</td>
+<td>Integer (<code>0</code>, <code>-1</code>, <code>1</code>)</td>
+<td><code>&lt;div tabindex=&quot;0&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>contenteditable</code></td>
+<td>Allows user to edit element text content live.</td>
+<td><code>true</code>, <code>false</code></td>
+<td><code>&lt;div contenteditable=&quot;true&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>draggable</code></td>
+<td>Specifies whether element is draggable via Drag &amp; Drop API.</td>
+<td><code>true</code>, <code>false</code>, <code>auto</code></td>
+<td><code>&lt;img draggable=&quot;true&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>spellcheck</code></td>
+<td>Controls browser spelling/grammar checking.</td>
+<td><code>true</code>, <code>false</code></td>
+<td><code>&lt;textarea spellcheck=&quot;true&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>translate</code></td>
+<td>Hints whether text should be translated by translation tools.</td>
+<td><code>yes</code>, <code>no</code></td>
+<td><code>&lt;span translate=&quot;no&quot;&gt;Brand&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td><code>accesskey</code></td>
+<td>Keyboard shortcut key trigger to focus element.</td>
+<td>Single character</td>
+<td><code>&lt;button accesskey=&quot;s&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>data-*</code></td>
+<td>Custom data payload attribute for developer JavaScript storage.</td>
+<td>String</td>
+<td><code>&lt;button data-user-id=&quot;1092&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>WAI-ARIA role defining element semantic purpose for accessibility.</td>
+<td>ARIA role string (<code>button</code>, <code>navigation</code>)</td>
+<td><code>&lt;div role=&quot;button&quot;&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>8.2 Event Handler Attributes vs JavaScript Event Listeners</h2>
+<p>Event handler attributes execute inline JavaScript code when specific user interactions occur.</p>
+<h3>Common Inline Event Attributes Table</h3>
+<table>
+<thead>
+<tr>
+<th>Event Attribute</th>
+<th>Trigger Condition</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>onclick</code></td>
+<td>Fires when element is clicked.</td>
+<td><code>&lt;button onclick=&quot;submitForm()&quot;&gt;Submit&lt;/button&gt;</code></td>
+</tr>
+<tr>
+<td><code>onchange</code></td>
+<td>Fires when input value is committed/changed.</td>
+<td><code>&lt;select onchange=&quot;updateCity(this.value)&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>oninput</code></td>
+<td>Fires instantly as user types in text box.</td>
+<td><code>&lt;input oninput=&quot;liveSearch(this.value)&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>onsubmit</code></td>
+<td>Fires when form submission occurs.</td>
+<td><code>&lt;form onsubmit=&quot;return validate()&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>onload</code></td>
+<td>Fires when element/page finishes loading.</td>
+<td><code>&lt;body onload=&quot;initApp()&quot;&gt;</code></td>
+</tr>
+</tbody></table>
+<h3>Why Modern Web Development Prefers <code>addEventListener()</code></h3>
+<ol>
+<li><strong>Separation of Concerns (SoC):</strong> Keeps HTML markup clean and moves JavaScript logic into modular <code>.js</code> files.</li>
+<li><strong>Security &amp; CSP:</strong> Inline event handlers violate Content Security Policy (<code>unsafe-inline</code>) rules and expose sites to XSS security vulnerabilities.</li>
+<li><strong>Multiple Event Binding:</strong> Inline attributes allow only ONE handler assignment per event. <code>addEventListener()</code> allows attaching multiple independent listener functions.</li>
+</ol>
+<pre><code class="language-html">&lt;!-- DISCOURAGED (Inline Handler) --&gt;
+&lt;button onclick=&quot;saveData()&quot;&gt;Save&lt;/button&gt;
+
+&lt;!-- RECOMMENDED (Modular JS Listener) --&gt;
+&lt;button id=&quot;saveBtn&quot;&gt;Save&lt;/button&gt;
+&lt;script&gt;
+  document.getElementById(&quot;saveBtn&quot;).addEventListener(&quot;click&quot;, function() {
+    console.log(&quot;Data Saved Securely&quot;);
+  });
+&lt;/script&gt;
+</code></pre>
+<hr>
+<h2>8.3 Void (Self-Closing) Elements vs Container Elements</h2>
+<ol>
+<li><strong>Container Elements (Paired Tags):</strong> Have an opening tag (<code>&lt;tag&gt;</code>) and a closing tag (<code>&lt;/tag&gt;</code>). They encapsulate inner text or child HTML elements. Examples: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;form&gt;</code>.</li>
+<li><strong>Void Elements (Self-Closing Tags):</strong> Cannot contain child text or inner HTML content. They do NOT have closing tags (<code>&lt;/input&gt;</code> or <code>&lt;/img&gt;</code> cause syntax errors in HTML5). Examples: <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;source&gt;</code>.</li>
+</ol>
+<hr>
+<h2>8.4 Block-Level vs Inline Elements Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect / Feature</th>
+<th>Block-Level Elements</th>
+<th>Inline Elements</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Default Display</strong></td>
+<td><code>display: block;</code></td>
+<td><code>display: inline;</code></td>
+</tr>
+<tr>
+<td><strong>Line Break</strong></td>
+<td>Always starts on a <strong>new line</strong>; forces newline after.</td>
+<td>Fits <strong>inline</strong> within surrounding text flow.</td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>Occupies <strong>100% full width</strong> of parent container.</td>
+<td>Occupies ONLY as much width as content requires.</td>
+</tr>
+<tr>
+<td><strong>Margins &amp; Padding</strong></td>
+<td>Respects all 4 sides (Top, Bottom, Left, Right).</td>
+<td>Respects Left &amp; Right; ignores Top &amp; Bottom vertical height margins.</td>
+</tr>
+<tr>
+<td><strong>Key Examples</strong></td>
+<td><code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;form&gt;</code></td>
+<td><code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h1>MODULE 9: COMPLETE CSE LAB ASSIGNMENT HTML5 PAGE</h1>
+<p>Below is a complete, fully functional HTML5 webpage designed according to standard 3rd Semester CSE Web Technologies lab curriculum guidelines.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;VTU CSE Web Technologies Lab Assignment 1&quot;&gt;
+  &lt;title&gt;VTU CSE Department | Student Registration Portal&lt;/title&gt;
+  
+  &lt;style&gt;
+    body {
+      font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    nav {
+      background-color: #1e293b;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #cbd5e1;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+    }
+    fieldset {
+      border: 1px solid #cbd5e1;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    footer {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 30px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- Document Header --&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Visvesvaraya Technological University&lt;/h1&gt;
+    &lt;p&gt;Department of Computer Science &amp; Engineering&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;!-- Navigation Bar --&gt;
+  &lt;nav aria-label=&quot;Main Navigation&quot;&gt;
+    &lt;a href=&quot;#about&quot;&gt;Course Overview&lt;/a&gt;
+    &lt;a href=&quot;#schedule&quot;&gt;Exam Schedule&lt;/a&gt;
+    &lt;a href=&quot;#register&quot;&gt;Student Registration&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;!-- Main Content Container --&gt;
+  &lt;main class=&quot;container&quot; role=&quot;main&quot;&gt;
+    
+    &lt;!-- About Section --&gt;
+    &lt;section id=&quot;about&quot;&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Web Technologies (18CS52)&lt;/h2&gt;
+        &lt;p&gt;This lab course introduces students to &lt;strong&gt;HTML5&lt;/strong&gt;, &lt;em&gt;CSS3&lt;/em&gt;, JavaScript, and server-side web development.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;hr&gt;
+
+    &lt;!-- Table Section --&gt;
+    &lt;section id=&quot;schedule&quot;&gt;
+      &lt;h2&gt;Semester 3 Examination Timetable&lt;/h2&gt;
+      &lt;table&gt;
+        &lt;caption&gt;Table 1: CSE Exam Schedule 2026&lt;/caption&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;Subject Code&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Subject Name&lt;/th&gt;
+            &lt;th scope=&quot;col&quot; colspan=&quot;2&quot;&gt;Date &amp; Session&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;18CS51&lt;/td&gt;
+            &lt;td&gt;Management &amp; Entrepreneurship&lt;/td&gt;
+            &lt;td&gt;01 Sept 2026&lt;/td&gt;
+            &lt;td&gt;Morning&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;18CS52&lt;/td&gt;
+            &lt;td&gt;Web Technology &amp; Applications&lt;/td&gt;
+            &lt;td&gt;04 Sept 2026&lt;/td&gt;
+            &lt;td&gt;Morning&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;hr&gt;
+
+    &lt;!-- Registration Form Section --&gt;
+    &lt;section id=&quot;register&quot;&gt;
+      &lt;h2&gt;Lab Assignment Submission Form&lt;/h2&gt;
+      &lt;form action=&quot;/submit-assignment&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; autocomplete=&quot;on&quot;&gt;
+        
+        &lt;fieldset&gt;
+          &lt;legend&gt;Student Personal Details&lt;/legend&gt;
+          
+          &lt;p&gt;
+            &lt;label for=&quot;usn&quot;&gt;USN Number:&lt;/label&gt;&lt;br&gt;
+            &lt;input type=&quot;text&quot; id=&quot;usn&quot; name=&quot;student_usn&quot; placeholder=&quot;e.g. 1VU22CS001&quot; required pattern=&quot;1[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}&quot;&gt;
+          &lt;/p&gt;
+
+          &lt;p&gt;
+            &lt;label for=&quot;email&quot;&gt;College Email:&lt;/label&gt;&lt;br&gt;
+            &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;student_email&quot; placeholder=&quot;student@college.edu&quot; required autocomplete=&quot;email&quot;&gt;
+          &lt;/p&gt;
+
+          &lt;p&gt;
+            &lt;label for=&quot;branch&quot;&gt;Select Branch:&lt;/label&gt;&lt;br&gt;
+            &lt;select id=&quot;branch&quot; name=&quot;branch&quot; required&gt;
+              &lt;option value=&quot;&quot; disabled selected&gt;-- Select Branch --&lt;/option&gt;
+              &lt;option value=&quot;cse&quot;&gt;Computer Science (CSE)&lt;/option&gt;
+              &lt;option value=&quot;ise&quot;&gt;Information Science (ISE)&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/p&gt;
+        &lt;/fieldset&gt;
+
+        &lt;fieldset&gt;
+          &lt;legend&gt;Assignment File Submission&lt;/legend&gt;
+          
+          &lt;p&gt;
+            &lt;label for=&quot;file&quot;&gt;Upload Code (.pdf / .zip):&lt;/label&gt;&lt;br&gt;
+            &lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;code_file&quot; accept=&quot;.pdf,.zip&quot; required&gt;
+          &lt;/p&gt;
+
+          &lt;p&gt;
+            &lt;label for=&quot;remarks&quot;&gt;Remarks:&lt;/label&gt;&lt;br&gt;
+            &lt;textarea id=&quot;remarks&quot; name=&quot;student_remarks&quot; rows=&quot;3&quot; cols=&quot;40&quot; placeholder=&quot;Enter optional comments...&quot; maxlength=&quot;500&quot;&gt;&lt;/textarea&gt;
+          &lt;/p&gt;
+        &lt;/fieldset&gt;
+
+        &lt;button type=&quot;submit&quot;&gt;Submit Assignment&lt;/button&gt;
+        &lt;button type=&quot;reset&quot;&gt;Reset Form&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+
+  &lt;/main&gt;
+
+  &lt;!-- Document Footer --&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 VTU Department of Computer Science. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</body>
+</html>

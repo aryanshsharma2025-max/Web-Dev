@@ -1,0 +1,51 @@
+body {
+    background-color: maroon;
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: blue;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px gray;
+}
+
+p {
+    color: green;
+    font-size: 18px;
+    font-family: Georgia;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-indent: 30px;
+}
+
+/* BOX + BORDER */
+.box {
+    background: white;
+    padding: 20px;
+    margin: 30px;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+
+    border-top: 3px solid red;
+    border-right: 3px solid blue;
+    border-bottom: 3px solid green;
+    border-left: 3px solid orange;
+
+    border-radius: 10px;
+}
+
+.link {
+    text-decoration: underline;
+}

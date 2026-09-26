@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 1</title>
+    <style>
+        body {
+            background-color: maroon;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .center-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: bold;
+            animation: moveName 10s linear infinite;
+        }
+        @keyframes moveName {
+            0% { transform: translate(-50%, -50%) translateX(-100%); }
+            100% { transform: translate(-50%, -50%) translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Web Technology Lab </h1>
+    <h2> HTML Basics </h2>
+    <h3>Introduction to Web Development </h3>
+    <p>
+        HTML is the standard markup language used to create web pages.
+    </p>
+    <hr>
+    <h3> Text Formatting </h3>
+    <b> Bold Text </b><br>
+    <i> Italic Text </i><br>
+    <h3>Unordered List</h3>
+    <ul>
+        <li> HTML </li>
+        <li> CSS </li>
+        <li> JAVASCRIPT </li>
+    </ul>
+    <h3> Ordered List </h3>
+    <ol>
+        <li> learn HTML </li>
+        <li> learn css </li>
+        <li> learn javascript </li>
+    </ol>
+    <hr>
+    <h3> HyperLink Example </h3>
+    <a href="https://www.google.com" style="color: yellow;">
+        visit Google
+    </a>
+
+    <div class="center-name">Aryansh</div>
+</body>
+</html>

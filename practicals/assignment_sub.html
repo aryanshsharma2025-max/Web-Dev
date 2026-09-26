@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial,sans-serif;
+            background-color: #f5f7f9;
+            color: #263238;
+         
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: #d5d5d5;
+            font-size: 16px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 100%;
+            margin: 55px auto;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            color: #3446a5;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-weight: bold;
+            color: #455a64;
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4545c6;
+            color: white;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background-color: #3030a5;
+        }
+
+        .about {
+            background-color: #e9f0f0;
+            border-left: 6px ;
+            padding: 28px 20px;
+            margin-bottom: 25px;
+        }
+	.projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+
+      
+        footer {
+            text-align: center;
+            background-color: #252525;
+            color: #ddd;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Student Portfolio</h1>
+        <p>Building ideas into useful software</p>
+    </header>
+
+    <main>
+
+        <!-- Introduction -->
+        <section class="hero">
+            <h2>Hi, I'm Aryansh 👋</h2>
+            <p>B.Tech CSE • Web Developer • Problem Solver</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </section>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                I create clean interfaces and learn by building practical projects.
+            </p>
+        </section>
+        <section id="projects">
+            <h2 class="projects-title">Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>Study Planner</h3>
+                    <p>
+                        Planner for classes, tasks and exams.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Grade Calculator</h3>
+                    <p>
+                        JavaScript academic calculator.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Campus Portal</h3>
+                    <p>
+                        Simple student campus portal.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Student Portfolio</p>
+    </footer>
+
+</body>
+</html>
