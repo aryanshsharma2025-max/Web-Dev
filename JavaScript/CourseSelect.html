@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function changeCourse() {
+            alert("selected course" + course);
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <select onchange="changeCourse(this.value)">
+            <option> select course</option>
+            <option>CSE</option>
+            <option> IT</option>
+            <option>ECE </option>
+        </select>
+    </form>
+</body>
+
+</html>
