@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Form submitted");
+        }
+        function resetForm() {
+            alert("Form reset");
+        }
+        function focusField() {
+            document.getElementById("name").style.background = "lightyellow";
+        }
+        function blurField() {
+            document.getElementById("name").style.background = "white";
+        }
+        function inputField(event) {
+            document.getElementById("live").innerHTML = event.target.value;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="submitForm(event)" onreset="resetForm()">
+        <label>Name:</label>
+        <input type="text" id="name" onfocus="focusField()" onblur="blurField()" oninput="inputField(event)">
+        <p id="live">Typing shows here...</p>
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
