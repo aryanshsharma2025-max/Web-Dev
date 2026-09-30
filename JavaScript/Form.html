@@ -11,7 +11,7 @@
             alert("Form reset");
         }
         function focusField() {
-            document.getElementById("name").style.background = "lightyellow";
+            document.getElementById("name").style.background = "blue";
         }
         function blurField() {
             document.getElementById("name").style.background = "white";
@@ -19,14 +19,26 @@
         function inputField(event) {
             document.getElementById("live").innerHTML = event.target.value;
         }
+        function changeField() {
+            alert("Value changed");
+        }
+        function selectField() {
+            alert("Text selected");
+        }
     </script>
 </head>
 <body>
     <form onsubmit="submitForm(event)" onreset="resetForm()">
         <label>Name:</label>
-        <input type="text" id="name" onfocus="focusField()" onblur="blurField()" oninput="inputField(event)">
-        <p id="live">Typing shows here...</p>
-        <br><br>
+        <input type="text" id="name" 
+               onfocus="focusField()" 
+               onblur="blurField()" 
+               oninput="inputField(event)" 
+               onchange="changeField()" 
+               onselect="selectField()"
+		placeholder ="Enter your name">
+        <p id="live">Typing shows here..</p>
+        <br>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
     </form>
