@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            change color
-        </title>
-    </head>
-    <body>
-        <h2 id = "heading">Surprise </h2>
-        <button onclick="show()">change color</button>
-        <script>
-            function show(){
-                alert("WELCOME GODFATHER")
-            }
-        </script>
-    </body>
+<head>
+    <title>Change Color</title>
+</head>
+<body>
+    <h2 id="heading">Surprise</h2>
+    <button onclick="show()">Change Color</button>
+    
+
+    <input type="text" onkeydown="keyDown(event)">
+    <p id="output">Press a key....</p>
+
+    <script>
+        function show() {
+            alert("WELCOME GODFATHER");
+ 
+            document.getElementById("heading").style.color = "blue";
+        }
+
+        function keyDown(event) {
+            document.getElementById("output").innerHTML = 
+                "onkeydown: Key Down - " + event.key;
+        }
+    </script>
+</body>
 </html>
