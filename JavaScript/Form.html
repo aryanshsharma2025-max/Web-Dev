@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Form Events</title>
     <script>
@@ -27,20 +28,17 @@
         }
     </script>
 </head>
+
 <body>
     <form onsubmit="submitForm(event)" onreset="resetForm()">
-        <label>Name:</label>
-        <input type="text" id="name" 
-               onfocus="focusField()" 
-               onblur="blurField()" 
-               oninput="inputField(event)" 
-               onchange="changeField()" 
-               onselect="selectField()"
-		placeholder ="Enter your name">
+        <label><b>Name:</b></label>
+        <input type="text" id="name" onfocus="focusField()" onblur="blurField()" oninput="inputField(event)"
+            onchange="changeField()" onselect="selectField()" placeholder="Enter your name">
         <p id="live">Typing shows here..</p>
         <br>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
     </form>
 </body>
+
 </html>
