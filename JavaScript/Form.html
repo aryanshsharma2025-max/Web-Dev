@@ -14,7 +14,7 @@
         function focusField() {
             document.getElementById("name").style.background = "blue";
         }
-        function blurField() {
+        function blurEvent() {
             document.getElementById("name").style.background = "white";
         }
         function inputField(event) {
@@ -32,7 +32,7 @@
 <body>
     <form onsubmit="submitForm(event)" onreset="resetForm()">
         <label><b>Name:</b></label>
-        <input type="text" id="name" onfocus="focusField()" onblur="blurField()" oninput="inputField(event)"
+        <input type="text" id="name" onfocus="focusField()" onblur="blurEvent()" oninput="inputField(event)"
             onchange="changeField()" onselect="selectField()" placeholder="Enter your name">
         <p id="live">Typing shows here..</p>
         <br>
