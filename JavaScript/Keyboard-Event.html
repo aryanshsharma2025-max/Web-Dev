@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keyboard Events</title>
+</head>
+
+<body>
+
+    <h2>Keyboard Event Tester</h2>
+
+    <input type="text" id="inputBox" placeholder="Press any key" onkeydown="keyDown(event)" onkeyup="keyUp(event)">
+
+    <p id="result"></p>
+
+    <script>
+
+        function keyDown(event) {
+
+            let output = "";
+
+            output += "Key: " + event.key + "<br>";
+            output += "Code: " + event.code + "<br>";
+            output += "Event Type: " + event.type + "<br>";
+            output += "Ctrl: " + event.ctrlKey + "<br>";
+            output += "Shift: " + event.shiftKey + "<br>";
+            output += "Alt: " + event.altKey + "<br>";
+            output += "Repeat: " + event.repeat + "<br>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+        function keyUp(event) {
+            console.log("Key released:", event.key);
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+
+<body>
+
+    <h2>Student Registration</h2>
+
+    <form>
+
+        <label>Name:</label>
+
+        <input type="text"
+               id="studentName"
+               name="studentName"
+               placeholder="Enter Name"
+               oninput="showDetails(this)"
+               onfocus="focusEvent(this)"
+               onblur="blurEvent(this)">
+
+        <br><br>
+
+        <label>Course:</label>
+
+        <select onchange="changeCourse(this)">
+            <option value="">Select Course</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="ME">Mechanical</option>
+        </select>
+
+        <br><br>
+
+        <p id="result"></p>
+
+    </form>
+
+    <script>
+
+        function showDetails(element) {
+
+            document.getElementById("result").innerHTML =
+                "Value: " + element.value + "<br>" +
+                "ID: " + element.id + "<br>" +
+                "Name: " + element.name + "<br>" +
+                "Type: " + element.type + "<br>" +
+                "Placeholder: " + element.placeholder;
+
+        }
+
+        function focusEvent(element) {
+
+            element.style.backgroundColor = "lightyellow";
+
+        }
+
+        function blurEvent(element) {
+
+            element.style.backgroundColor = "white";
+
+        }
+
+        function changeCourse(element) {
+
+            alert("Selected Course: " + element.value);
+
+        }
+
+    </script>
+
+</body>
+</html>
