@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM EVENTS</title>
+</head>
+
+<body>
+
+    <h2>FORM EVENTS</h2>
+
+    <form>
+
+        <label>Name:</label>
+
+        <input type="text" id="studentName" name="studentName" placeholder="Enter Name" oninput="showDetails(this)"
+            onfocus="focusEvent(this)" onblur="blurEvent(this)" onselect="selectText(this)">
+
+        <br><br>
+
+        <label>Course:</label>
+
+        <select onchange="changeCourse(this)">
+
+            <option value="">Select Course</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="IT">IT</option>
+            <option value="ME">Mechanical</option>
+            <option value="Civil">Civil</option>
+
+        </select>
+
+        <br><br>
+
+        <p id="result"></p>
+
+    </form>
+
+
+    <script>
+
+        function showDetails(element) {
+
+            document.getElementById("result").innerHTML =
+                "Value: " + element.value + "<br>" +
+                "Name: " + element.name + "<br>" +
+                "Type: " + element.type + "<br>" +
+                "Placeholder: " + element.placeholder;
+
+        }
+
+
+        function focusEvent(element) {
+
+            element.style.backgroundColor = "lightyellow";
+
+        }
+
+
+        function blurEvent(element) {
+
+            element.style.backgroundColor = "white";
+
+        }
+
+
+        function selectText(element) {
+
+            document.getElementById("result").innerHTML =
+                "You selected text: " + element.value;
+
+        }
+
+
+        function changeCourse(element) {
+
+            let course = element.value;
+            if (course === "CSE") {
+
+                document.getElementById("result").innerHTML =
+                    alert("Sorry You are not Eligible for the CSE course.");
+
+            }
+
+            else if (course === "ECE") {
+
+                document.getElementById("result").innerHTML =
+                    alert("You selected Electronics and Communication.");
+
+            }
+
+            else if (course === "IT") {
+
+                document.getElementById("result").innerHTML =
+                    alert("You selected Information Technology.");
+
+            }
+
+            else if (course === "ME") {
+
+                document.getElementById("result").innerHTML =
+                   alert("You selected Mechanical Engineering.");
+
+            }
+
+            else if (course === "Civil") {
+
+                document.getElementById("result").innerHTML =
+                    "You selected Civil Engineering.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

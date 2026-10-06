@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Student Form</title>
 </head>
@@ -12,13 +13,8 @@
 
         <label>Name:</label>
 
-        <input type="text"
-               id="studentName"
-               name="studentName"
-               placeholder="Enter Name"
-               oninput="showDetails(this)"
-               onfocus="focusEvent(this)"
-               onblur="blurEvent(this)">
+        <input type="text" id="studentName" name="studentName" placeholder="Enter Name" oninput="showDetails(this)"
+            onfocus="focusEvent(this)" onblur="blurEvent(this)">
 
         <br><br>
 
@@ -52,13 +48,13 @@
 
         function focusEvent(element) {
 
-            element.style.backgroundColor = "lightyellow";
+            element.style.backgroundColor = "maroon";
 
         }
 
         function blurEvent(element) {
 
-            element.style.backgroundColor = "white";
+            element.style.backgroundColor = "lightblue";
 
         }
 
@@ -71,4 +67,5 @@
     </script>
 
 </body>
+
 </html>
