@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My JavaScript Page</title>
+
+</head>
+
+<body>
+
+    <h2 id="output">Document Object</h2>
+
+    <script>
+
+        document.getElementById("output").innerHTML =
+            "Page Title: " + document.title + "<br>" +
+            "Page URL: " + document.URL + "<br>" +
+            "Domain: " + document.domain + "<br>" +
+            "Number of Forms: " + document.forms.length + "<br>" +
+            "Number of Images: " + document.images.length + "<br>" +
+            "Number of Links: " + document.links.length + "<br>" +
+            "Number of Scripts: " + document.scripts.length;
+
+    </script>
+
+</body>
+
+</html>

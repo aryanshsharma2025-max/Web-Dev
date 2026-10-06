@@ -22,7 +22,6 @@
 
         <select onchange="changeCourse(this)">
 
-            <option value="">Select Course</option>
             <option value="CSE">CSE</option>
             <option value="ECE">ECE</option>
             <option value="IT">IT</option>
@@ -47,20 +46,6 @@
                 "Name: " + element.name + "<br>" +
                 "Type: " + element.type + "<br>" +
                 "Placeholder: " + element.placeholder;
-
-        }
-
-
-        function focusEvent(element) {
-
-            element.style.backgroundColor = "lightyellow";
-
-        }
-
-
-        function blurEvent(element) {
-
-            element.style.backgroundColor = "white";
 
         }
 
@@ -100,14 +85,14 @@
             else if (course === "ME") {
 
                 document.getElementById("result").innerHTML =
-                   alert("You selected Mechanical Engineering.");
+                    alert("You selected Mechanical Engineering.");
 
             }
 
             else if (course === "Civil") {
 
                 document.getElementById("result").innerHTML =
-                    "You selected Civil Engineering.";
+                    alert("You selected Civil Engineering.");
 
             }
 

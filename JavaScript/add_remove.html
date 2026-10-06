@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        add remove
+    </title>
+</head>
+
+<body>
+    <h2> Student Information</h2>
+
+    <button onclick="addStudent()"> Add Student</button>
+
+    <script>
+
+        let p;
+
+        function addStudent() {
+            p = document.createElement("p");
+            p.innerHTML = "Name: Rahul Sharma";
+            document.body.appendChild(p);
+
+            let button = document.createElement("button");
+            button.innerHTML = "Remove Student";
+            button.onclick = removeStudent;
+            document.body.appendChild(button);
+        }
+
+        function removeStudent() {
+            document.body.removeChild(p);
+        }
+
+    </script>
+
+</body>
+
+</html>
