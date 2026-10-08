@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average of Numbers</title>
+</head>
+<body>
+  <h2>Calculate Average</h2>
+
+  <label for="numbers">Enter numbers (comma separated):</label><br>
+  <input type="text" id="numbers" placeholder="e.g. 10,20,30,40,50" style="width: 250px;">
+  <button onclick="calculateAverage()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateAverage() {
+      let numbersStr = document.getElementById("numbers").value;
+      let numbers = numbersStr.split(",");
+
+      let sum = 0;
+
+      for (let i = 0; i < numbers.length; i++) {
+        sum = sum + Number(numbers[i]);
+      }
+
+      let average = sum / numbers.length;
+
+      document.getElementById("result").innerText = "Average is: " + average;
+    }
+  </script>
+</body>
+</html>

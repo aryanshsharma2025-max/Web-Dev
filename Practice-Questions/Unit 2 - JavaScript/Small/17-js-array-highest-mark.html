@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highest Mark</title>
+</head>
+<body>
+  <h2>Find Highest Mark</h2>
+
+  <label for="marks">Enter marks of students (comma separated):</label><br>
+  <input type="text" id="marks" placeholder="e.g. 85,90,78,92,88" style="width: 250px;">
+  <button onclick="findHighest()">Find</button>
+
+  <p id="result"></p>
+
+  <script>
+    function findHighest() {
+      let marksStr = document.getElementById("marks").value;
+      let marks = marksStr.split(",");
+
+      let highest = Number(marks[0]);
+
+      for (let i = 1; i < marks.length; i++) {
+        if (Number(marks[i]) > highest) {
+          highest = Number(marks[i]);
+        }
+      }
+
+      document.getElementById("result").innerText = "Highest mark is: " + highest;
+    }
+  </script>
+</body>
+</html>

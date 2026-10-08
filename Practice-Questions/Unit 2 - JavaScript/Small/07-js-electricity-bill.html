@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electricity Bill</title>
+</head>
+<body>
+  <h2>Calculate Electricity Bill</h2>
+
+  <label for="units">Enter units consumed:</label>
+  <input type="number" id="units" placeholder="Enter units">
+  <button onclick="calculateBill()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateBill() {
+      let units = document.getElementById("units").value;
+      units = Number(units);
+
+      let bill = 0;
+
+      if (units <= 50) {
+        bill = units * 2;
+      } else if (units <= 150) {
+        bill = (50 * 2) + ((units - 50) * 3);
+      } else if (units <= 300) {
+        bill = (50 * 2) + (100 * 3) + ((units - 150) * 4);
+      } else {
+        bill = (50 * 2) + (100 * 3) + (150 * 4) + ((units - 300) * 5);
+      }
+
+      document.getElementById("result").innerText = "Electricity bill is: Rs. " + bill;
+    }
+  </script>
+</body>
+</html>

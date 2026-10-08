@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rectangle Area</title>
+</head>
+<body>
+  <h2>Calculate Rectangle Area</h2>
+
+  <label for="length">Enter length:</label>
+  <input type="number" id="length" placeholder="Enter length"><br><br>
+
+  <label for="width">Enter width:</label>
+  <input type="number" id="width" placeholder="Enter width"><br><br>
+
+  <button onclick="calculateArea()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateArea() {
+      let length = document.getElementById("length").value;
+      let width = document.getElementById("width").value;
+
+      length = Number(length);
+      width = Number(width);
+
+      let area = length * width;
+
+      document.getElementById("result").innerText = "Area of rectangle is: " + area;
+    }
+  </script>
+</body>
+</html>
