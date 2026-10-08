@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Message</title>
+</head>
+<body>
+  <h2>Display Welcome Message</h2>
+
+  <label for="username">Enter your name:</label>
+  <input type="text" id="username" placeholder="Your name">
+  <button onclick="showWelcome()">Show Welcome</button>
+
+  <p id="message"></p>
+
+  <script>
+    function showWelcome() {
+      let name = document.getElementById("username").value;
+
+      if (name.trim() === "") {
+        document.getElementById("message").innerText = "Please enter your name.";
+      } else {
+        document.getElementById("message").innerText = "Welcome, " + name + "!";
+      }
+    }
+  </script>
+</body>
+</html>
