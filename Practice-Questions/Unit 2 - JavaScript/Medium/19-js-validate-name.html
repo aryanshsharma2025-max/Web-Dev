@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Name Validation</title>
+</head>
+
+<body>
+    <h2>Student Registration</h2>
+
+    <label for="studentName">Enter Student Name:</label>
+    <input type="text" id="studentName" placeholder="Type your name">
+    <button onclick="validateName()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        function validateName() {
+            let name = document.getElementById("studentName").value;
+
+            if (name.trim() === "") {
+                document.getElementById("message").innerText = "Error: Student name cannot be empty!";
+            } else {
+                document.getElementById("message").innerText = "Name accepted: " + name;
+            }
+        }
+    </script>
+</body>
+
+</html>
