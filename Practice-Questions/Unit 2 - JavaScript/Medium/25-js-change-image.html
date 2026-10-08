@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Image</title>
+</head>
+<body>
+  <h2>Change Image on Button Click</h2>
+
+  <img id="image" src="https://via.placeholder.com/200x150?text=First+Image" alt="Sample image">
+  <br><br>
+  <button onclick="changeImage()">Change Image</button>
+
+  <script>
+    function changeImage() {
+      document.getElementById("image").src = "https://via.placeholder.com/200x150/87CEEB/000000?text=Second+Image";
+    }
+  </script>
+</body>
+</html>

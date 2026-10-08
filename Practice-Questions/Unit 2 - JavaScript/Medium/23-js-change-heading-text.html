@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Heading Text</title>
+</head>
+<body>
+  <h2 id="heading">Original Heading</h2>
+
+  <label for="newText">Enter new heading text:</label>
+  <input type="text" id="newText" placeholder="Type new heading">
+  <button onclick="changeHeading()">Change Heading</button>
+
+  <script>
+    function changeHeading() {
+      let newText = document.getElementById("newText").value;
+
+      if (newText.trim() !== "") {
+        document.getElementById("heading").innerText = newText;
+      }
+    }
+  </script>
+</body>
+</html>

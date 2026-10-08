@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Count</title>
+</head>
+<body>
+  <h2>Count Characters</h2>
+
+  <label for="text">Enter your message:</label><br>
+  <textarea id="text" rows="5" cols="30" onkeyup="countCharacters()"></textarea>
+
+  <p id="message">Characters: 0</p>
+
+  <script>
+    function countCharacters() {
+      let text = document.getElementById("text").value;
+
+      document.getElementById("message").innerText = "Characters: " + text.length;
+    }
+  </script>
+</body>
+</html>
