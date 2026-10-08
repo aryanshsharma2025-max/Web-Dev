@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voting Eligibility</title>
+</head>
+<body>
+  <h2>Check Voting Eligibility</h2>
+
+  <label for="age">Enter student's age:</label>
+  <input type="number" id="age" placeholder="Enter age here">
+  <button onclick="checkEligibility()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkEligibility() {
+      let age = document.getElementById("age").value;
+
+      age = Number(age);
+
+      if (age >= 18) {
+        document.getElementById("result").innerText = "The student is eligible to vote.";
+      } else {
+        document.getElementById("result").innerText = "The student is NOT eligible to vote.";
+      }
+    }
+  </script>
+</body>
+</html>
