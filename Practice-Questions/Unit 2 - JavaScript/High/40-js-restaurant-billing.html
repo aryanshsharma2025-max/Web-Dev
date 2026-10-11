@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Bill</title>
+</head>
+<body>
+  <h2>Restaurant Bill Calculator</h2>
+
+  <label for="foodAmount">Food amount:</label>
+  <input type="number" id="foodAmount" placeholder="Enter food amount"><br><br>
+
+  <label for="tipPercent">Tip percentage:</label>
+  <input type="number" id="tipPercent" placeholder="Enter tip percentage"><br><br>
+
+  <button onclick="calculateBill()">Calculate Bill</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateBill() {
+      let foodAmount = Number(document.getElementById("foodAmount").value);
+      let tipPercent = Number(document.getElementById("tipPercent").value);
+      let gst = foodAmount * 0.05;
+      let tip = foodAmount * tipPercent / 100;
+      let totalBill = foodAmount + gst + tip;
+
+      document.getElementById("result").innerHTML =
+        "Food Amount: Rs. " + foodAmount + "<br>" +
+        "GST (5%): Rs. " + gst.toFixed(2) + "<br>" +
+        "Tip: Rs. " + tip.toFixed(2) + "<br>" +
+        "Total Bill: Rs. " + totalBill.toFixed(2);
+    }
+  </script>
+</body>
+</html>

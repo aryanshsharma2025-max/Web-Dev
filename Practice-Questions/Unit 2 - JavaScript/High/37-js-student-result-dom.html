@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Result</title>
+</head>
+<body>
+  <h2>Student Result Calculator</h2>
+
+  <label for="studentName">Student name:</label>
+  <input type="text" id="studentName" placeholder="Enter name"><br><br>
+
+  <label for="marks1">Marks in Subject 1:</label>
+  <input type="number" id="marks1"><br><br>
+
+  <label for="marks2">Marks in Subject 2:</label>
+  <input type="number" id="marks2"><br><br>
+
+  <label for="marks3">Marks in Subject 3:</label>
+  <input type="number" id="marks3"><br><br>
+
+  <button onclick="showResult()">Show Result</button>
+
+  <p id="result"></p>
+
+  <script>
+    function showResult() {
+      let name = document.getElementById("studentName").value;
+      let marks1 = Number(document.getElementById("marks1").value);
+      let marks2 = Number(document.getElementById("marks2").value);
+      let marks3 = Number(document.getElementById("marks3").value);
+
+      let total = marks1 + marks2 + marks3;
+      let percentage = total / 3;
+      let status;
+
+      if (marks1 < 35 || marks2 < 35 || marks3 < 35) {
+        status = "Fail";
+      } else {
+        status = "Pass";
+      }
+
+      document.getElementById("result").innerHTML =
+        "Student Name: " + name + "<br>" +
+        "Total Marks: " + total + " / 300<br>" +
+        "Percentage: " + percentage.toFixed(2) + "%<br>" +
+        "Result: " + status;
+    }
+  </script>
+</body>
+</html>
