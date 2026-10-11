@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key Press Detector</title>
+</head>
+<body>
+  <h2>Press Any Key</h2>
+
+  <input type="text" id="inputBox" placeholder="Type something here" onkeydown="showKey(event)">
+  
+  <p id="result">Key pressed will appear here...</p>
+
+  <script>
+    function showKey(event) {
+      document.getElementById("result").innerText = "You pressed: " + event.key;
+    }
+  </script>
+</body>
+</html>
