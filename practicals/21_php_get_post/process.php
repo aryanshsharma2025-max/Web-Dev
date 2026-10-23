@@ -1,0 +1,4 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "GET") { echo "<h2>Data received using GET</h2>"; if (isset($_GET["name"])) echo "Hello, " . htmlspecialchars($_GET["name"]) . "<br>"; echo "URL query string: " . htmlspecialchars($_SERVER["QUERY_STRING"]); }
+elseif ($_SERVER["REQUEST_METHOD"] == "POST") { echo "<h2>Data received using POST</h2>"; $name=htmlspecialchars(trim($_POST["name"])); $email=htmlspecialchars(trim($_POST["email"])); $gender=$_POST["gender"]??""; $branch=$_POST["branch"]??""; $skills=$_POST["skills"]??[]; if ($name == "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) echo "<p style='color:red'>Invalid name or e-mail.</p>"; else { echo "Name: $name<br>Email: $email<br>Gender: " . htmlspecialchars($gender) . "<br>Branch: " . htmlspecialchars($branch) . "<br>Skills: " . (count($skills) ? htmlspecialchars(implode(", ", $skills)) : "None") . "<br>"; } }
+?>

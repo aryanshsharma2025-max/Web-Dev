@@ -1,0 +1,4 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>JavaScript Functions</title></head><body><h2>JavaScript Functions</h2><pre id="out"></pre><script>
+var out="";function show(t){out+=t+"\n";}function add(a,b){return a+b;}show("add(5, 7) = "+add(5,7));function greet(name="Guest"){return "Hello, "+name+"!";}show(greet("Asha"));show(greet());const square=function(x){return x*x;};show("square(6) = "+square(6));const cube=x=>x*x*x;show("cube(3) = "+cube(3));function factorial(n){return n<=1?1:n*factorial(n-1);}show("factorial(6) = "+factorial(6));function sum(...numbers){let total=0;for(let n of numbers)total+=n;return total;}show("sum(1,2,3,4,5) = "+sum(1,2,3,4,5));let nums=[1,2,3,4,5];show("map (x2)   : "+nums.map(n=>n*2));show("filter even: "+nums.filter(n=>n%2===0));let g="global";function test(){let l="local";return g+" and "+l;}show(test());document.getElementById("out").textContent=out;
+</script></body></html>
