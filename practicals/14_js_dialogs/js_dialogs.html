@@ -1,2 +1,33 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>alert, prompt and confirm</title></head><body><h2>Interactive Page using Dialog Boxes</h2><button onclick="demo()">Start</button><p id="result"></p><script>function demo(){alert("Welcome to the interactive page!");var name=prompt("Enter your name:","Student");if(name===null||name.trim()===""){document.getElementById("result").innerHTML="You did not enter a name.";return;}var age=parseInt(prompt("Enter your age:"));var ok=confirm("Hello "+name+", do you want to know your voting status?");var text="Hello <b>"+name+"</b>. ";if(ok){if(isNaN(age))text+="Age is not valid.";else if(age>=18)text+="You are eligible to vote.";else text+="You can vote after "+(18-age)+" year(s).";}else text+="You pressed Cancel.";document.getElementById("result").innerHTML=text;}</script></body></html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>alert, prompt and confirm</title>
+    </head>
+    <body>
+        <h2>Interactive Page using Dialog Boxes</h2>
+        <button onclick="demo()">Start</button>
+        <p id="result">
+        </p>
+        <script>
+            function demo() {
+            alert("Welcome to the interactive page!");
+            var name=prompt("Enter your name:","Student");
+            if(name===null||name.trim()==="") {
+            document.getElementById("result").innerHTML="You did not enter a name.";
+            return;
+            }
+            var age=parseInt(prompt("Enter your age:"));
+            var ok=confirm("Hello "+name+", do you want to know your voting status?");
+            var text="Hello <b>"+name+"</b>. ";
+            if(ok) {
+            if(isNaN(age))text+="Age is not valid.";
+            else if(age>=18)text+="You are eligible to vote.";
+            else text+="You can vote after "+(18-age)+" year(s).";
+            }
+            else text+="You pressed Cancel.";
+            document.getElementById("result").innerHTML=text;
+            }
+        </script>
+    </body>
+</html>
