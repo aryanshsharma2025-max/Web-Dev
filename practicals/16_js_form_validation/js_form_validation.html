@@ -1,2 +1,124 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>JavaScript Form Validation</title><style>body{font-family:Arial,sans-serif}td{padding:5px}.err{color:red;font-size:13px}</style></head><body><h2>Registration Form</h2><form name="reg" onsubmit="return validate()"><table><tr><td>Name</td><td><input type="text" id="name"></td><td class="err" id="e1"></td></tr><tr><td>Email</td><td><input type="text" id="email"></td><td class="err" id="e2"></td></tr><tr><td>Mobile</td><td><input type="text" id="mobile"></td><td class="err" id="e3"></td></tr><tr><td>Password</td><td><input type="password" id="pwd"></td><td class="err" id="e4"></td></tr><tr><td>Confirm Password</td><td><input type="password" id="cpwd"></td><td class="err" id="e5"></td></tr><tr><td></td><td><input type="submit" value="Register"></td><td></td></tr></table></form><script>function setErr(id,msg){document.getElementById(id).innerHTML=msg;}function validate(){var ok=true,name=document.getElementById("name").value.trim(),email=document.getElementById("email").value.trim(),mobile=document.getElementById("mobile").value.trim(),pwd=document.getElementById("pwd").value,cpwd=document.getElementById("cpwd").value;for(var i=1;i<=5;i++)document.getElementById("e"+i).innerHTML="";if(name===""){setErr("e1","Name is required");ok=false;}else if(!/^[A-Za-z ]{3,}$/.test(name)){setErr("e1","Only letters, minimum 3");ok=false;}if(!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)){setErr("e2","Enter a valid e-mail");ok=false;}if(!/^[6-9][0-9]{9}$/.test(mobile)){setErr("e3","Enter a valid 10-digit mobile number");ok=false;}if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(pwd)){setErr("e4","Min 8 chars with upper, lower case and digit");ok=false;}if(pwd!==cpwd){setErr("e5","Passwords do not match");ok=false;}if(ok)alert("Registration successful!");return ok;}</script></body></html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Form Validation</title>
+        <style>
+            body {
+            font-family:Arial,sans-serif
+            }
+            td {
+            padding:5px
+            }
+            .err {
+            color:red;
+            font-size:13px
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form name="reg" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" id="name">
+                    </td>
+                    <td class="err" id="e1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="text" id="email">
+                    </td>
+                    <td class="err" id="e2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>
+                        <input type="text" id="mobile">
+                    </td>
+                    <td class="err" id="e3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" id="pwd">
+                    </td>
+                    <td class="err" id="e4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td>
+                        <input type="password" id="cpwd">
+                    </td>
+                    <td class="err" id="e5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Register">
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function setErr(id,msg) {
+            document.getElementById(id).innerHTML=msg;
+            }
+            function validate() {
+            var ok=true,name=document.getElementById("name").value.trim(),email=document.getElementById("email").value.trim(),mobile=document.getElementById("mobile").value.trim(),pwd=document.getElementById("pwd").value,cpwd=document.getElementById("cpwd").value;
+            for(var i=1;
+            i<=5;
+            i++)document.getElementById("e"+i).innerHTML="";
+            if(name==="") {
+            setErr("e1","Name is required");
+            ok=false;
+            }
+            else if(!/^[A-Za-z ] {
+            3,
+            }
+            $/.test(name)) {
+            setErr("e1","Only letters, minimum 3");
+            ok=false;
+            }
+            if(!/^[^\s@]+@[^\s@]+\.[a-z] {
+            2,
+            }
+            $/i.test(email)) {
+            setErr("e2","Enter a valid e-mail");
+            ok=false;
+            }
+            if(!/^[6-9][0-9] {
+            9
+            }
+            $/.test(mobile)) {
+            setErr("e3","Enter a valid 10-digit mobile number");
+            ok=false;
+            }
+            if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d). {
+            8,
+            }
+            $/.test(pwd)) {
+            setErr("e4","Min 8 chars with upper, lower case and digit");
+            ok=false;
+            }
+            if(pwd!==cpwd) {
+            setErr("e5","Passwords do not match");
+            ok=false;
+            }
+            if(ok)alert("Registration successful!");
+            return ok;
+            }
+        </script>
+    </body>
+</html>
