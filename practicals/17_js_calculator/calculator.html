@@ -1,2 +1,104 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>JavaScript Calculator</title><style>body{font-family:Arial,sans-serif;background:#eee}#calc{width:260px;margin:40px auto;padding:15px;background:#333;border-radius:10px}#display{width:100%;height:50px;font-size:24px;text-align:right;box-sizing:border-box;margin-bottom:10px}.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}button{height:45px;font-size:18px;border:none;border-radius:6px;cursor:pointer}.op{background:#ff9800;color:#fff}.eq{background:#4caf50;color:#fff}.clr{background:#f44336;color:#fff}</style></head><body><div id="calc"><input type="text" id="display" readonly><div class="keys"><button class="clr" onclick="clearAll()">C</button><button onclick="backspace()">&larr;</button><button class="op" onclick="press('%')">%</button><button class="op" onclick="press('/')">&divide;</button><button onclick="press('7')">7</button><button onclick="press('8')">8</button><button onclick="press('9')">9</button><button class="op" onclick="press('*')">&times;</button><button onclick="press('4')">4</button><button onclick="press('5')">5</button><button onclick="press('6')">6</button><button class="op" onclick="press('-')">-</button><button onclick="press('1')">1</button><button onclick="press('2')">2</button><button onclick="press('3')">3</button><button class="op" onclick="press('+')">+</button><button onclick="press('0')">0</button><button onclick="press('.')">.</button><button class="eq" style="grid-column:span 2" onclick="calculate()">=</button></div></div><script>var display=document.getElementById("display");function press(ch){display.value+=ch;}function clearAll(){display.value="";}function backspace(){display.value=display.value.slice(0,-1);}function calculate(){var expr=display.value;if(!/^[0-9+\-*\/.%() ]+$/.test(expr)){display.value="Error";return;}try{var result=Function('"use strict"; return ('+expr+')')();display.value=isFinite(result)?result:"Error";}catch(e){display.value="Error";}}</script></body></html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Calculator</title>
+        <style>
+            body {
+            font-family:Arial,sans-serif;
+            background:#eee
+            }
+            #calc {
+            width:260px;
+            margin:40px auto;
+            padding:15px;
+            background:#333;
+            border-radius:10px
+            }
+            #display {
+            width:100%;
+            height:50px;
+            font-size:24px;
+            text-align:right;
+            box-sizing:border-box;
+            margin-bottom:10px
+            }
+            .keys {
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:8px
+            }
+            button {
+            height:45px;
+            font-size:18px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer
+            }
+            .op {
+            background:#ff9800;
+            color:#fff
+            }
+            .eq {
+            background:#4caf50;
+            color:#fff
+            }
+            .clr {
+            background:#f44336;
+            color:#fff
+            }
+        </style>
+    </head>
+    <body>
+        <div id="calc">
+            <input type="text" id="display" readonly>
+            <div class="keys">
+                <button class="clr" onclick="clearAll()">C</button>
+                <button onclick="backspace()">&larr;</button>
+                <button class="op" onclick="press('%')">%</button>
+                <button class="op" onclick="press('/')">&divide;</button>
+                <button onclick="press('7')">7</button>
+                <button onclick="press('8')">8</button>
+                <button onclick="press('9')">9</button>
+                <button class="op" onclick="press('*')">&times;</button>
+                <button onclick="press('4')">4</button>
+                <button onclick="press('5')">5</button>
+                <button onclick="press('6')">6</button>
+                <button class="op" onclick="press('-')">-</button>
+                <button onclick="press('1')">1</button>
+                <button onclick="press('2')">2</button>
+                <button onclick="press('3')">3</button>
+                <button class="op" onclick="press('+')">+</button>
+                <button onclick="press('0')">0</button>
+                <button onclick="press('.')">.</button>
+                <button class="eq" style="grid-column:span 2" onclick="calculate()">=</button>
+            </div>
+        </div>
+        <script>
+            var display=document.getElementById("display");
+            function press(ch) {
+            display.value+=ch;
+            }
+            function clearAll() {
+            display.value="";
+            }
+            function backspace() {
+            display.value=display.value.slice(0,-1);
+            }
+            function calculate() {
+            var expr=display.value;
+            if(!/^[0-9+\-*\/.%() ]+$/.test(expr)) {
+            display.value="Error";
+            return;
+            }
+            try {
+            var result=Function('"use strict"; return ('+expr+')')();
+            display.value=isFinite(result)?result:"Error";
+            }
+            catch(e) {
+            display.value="Error";
+            }
+            }
+        </script>
+    </body>
+</html>
