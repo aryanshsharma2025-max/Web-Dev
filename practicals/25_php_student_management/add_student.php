@@ -1,5 +1,48 @@
+
 <?php
-require "db.php"; require_login(); $msg="";
-if ($_SERVER["REQUEST_METHOD"] == "POST") { $name=trim($_POST["name"]); $email=trim($_POST["email"]); $branch=$_POST["branch"]; $marks=(float)$_POST["marks"]; if ($name=="" || !filter_var($email,FILTER_VALIDATE_EMAIL) || $marks<0 || $marks>100) $msg="Please enter valid details."; else { $stmt=$conn->prepare("INSERT INTO students (name,email,branch,marks) VALUES (?,?,?,?)"); $stmt->bind_param("sssd",$name,$email,$branch,$marks); $stmt->execute(); header("Location: dashboard.php"); exit(); } }
-?>
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Add Student</title></head><body><h2>Add Student</h2><p style="color:red"><?php echo $msg; ?></p><form method="post"><p>Name: <input type="text" name="name" required></p><p>Email: <input type="email" name="email" required></p><p>Branch: <select name="branch"><option>CSE</option><option>ECE</option><option>ME</option></select></p><p>Marks: <input type="number" name="marks" step="0.01" min="0" max="100" required></p><input type="submit" value="Save"> <a href="dashboard.php">Cancel</a></form></body></html>
+require "db.php";
+require_login();
+$msg="";
+if ($_SERVER["REQUEST_METHOD"] == "POST")  {
+    $name=trim($_POST["name"]);
+    $email=trim($_POST["email"]);
+    $branch=$_POST["branch"];
+    $marks=(float)$_POST["marks"];
+    if ($name=="" || !filter_var($email,FILTER_VALIDATE_EMAIL) || $marks<0 || $marks>100) $msg="Please enter valid details.";
+    else  {
+        $stmt=$conn->prepare("INSERT INTO students (name,email,branch,marks) VALUES (?,?,?,?)");
+        $stmt->bind_param("sssd",$name,$email,$branch,$marks);
+        $stmt->execute();
+        header("Location: dashboard.php");
+        exit();
+    }
+}
+?><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Student</title>
+    </head>
+    <body>
+        <h2>Add Student</h2>
+        <p style="color:red">
+<?php echo $msg;
+?></p>
+<form method="post">
+    <p>Name: <input type="text" name="name" required>
+    </p>
+    <p>Email: <input type="email" name="email" required>
+    </p>
+    <p>Branch: <select name="branch">
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>ME</option>
+    </select>
+</p>
+<p>Marks: <input type="number" name="marks" step="0.01" min="0" max="100" required>
+</p>
+<input type="submit" value="Save">
+<a href="dashboard.php">Cancel</a>
+</form>
+</body>
+</html>
