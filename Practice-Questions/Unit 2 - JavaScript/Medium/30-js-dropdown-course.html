@@ -1,33 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Course Selection</title>
-</head>
-<body>
-  <h2>Select Your Course</h2>
+  <head>
+    <title>Course Selection</title>
+  </head>
+  <body>
+    <h2>Select Your Course</h2>
 
-  <!-- Dropdown list -->
-  <label for="course">Choose a course:</label>
-  <select id="course" onchange="showCourse()">
-    <option value="">--Select--</option>
-    <option value="C++">C++ Programming</option>
-    <option value="Java">Java Programming</option>
-    <option value="Python">Python Programming</option>
-    <option value="Web">Web Development</option>
-  </select>
+    <!-- Dropdown list -->
+    <label for="course">Choose a course:</label>
+    <select id="course" onchange="showCourse()">
+      <option value="">--Select--</option>
+      <option value="C++">C++ Programming</option>
+      <option value="Java">Java Programming</option>
+      <option value="Python">Python Programming</option>
+      <option value="Web">Web Development</option>
+    </select>
 
-  <p id="result"></p>
+    <p id="result"></p>
 
-  <script>
-    function showCourse() {
-      let selectedCourse = document.getElementById("course").value;
+    <script>
+      function showCourse() {
+        let selectedCourse = document.getElementById("course").value;
 
-      if (selectedCourse === "") {
-        document.getElementById("result").innerText = "Please select a course.";
-      } else {
-        document.getElementById("result").innerText = "You selected: " + selectedCourse;
+        if (selectedCourse === "") {
+          document.getElementById("result").innerText =
+            "Please select a course.";
+        } else {
+          document.getElementById("result").innerText =
+            "You selected: " + selectedCourse;
+        }
       }
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
