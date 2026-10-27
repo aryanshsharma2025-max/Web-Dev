@@ -1,51 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <title>Mouse Events</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h2>Mouse Event Practice</h2>
 
-    <div id="box" style="width:200px; height:150px; background-color:lightblue; 
-                text-align:center; padding-top:50px;" onclick="clickEvent(this)" ondblclick="doubleClick(this)"
-        onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onmousedown="mouseDown(this)"
-        onmouseup="mouseUp(this)">
-
-        Move / Click Me
-
+    <div
+      id="box"
+      style="
+        width: 200px;
+        height: 150px;
+        background-color: lightblue;
+        text-align: center;
+        padding-top: 50px;
+      "
+      onclick="clickEvent(this)"
+      ondblclick="doubleClick(this)"
+      onmouseover="mouseOver(this)"
+      onmouseout="mouseOut(this)"
+      onmousedown="mouseDown(this)"
+      onmouseup="mouseUp(this)"
+    >
+      Move / Click Me
     </div>
 
     <script>
+      function clickEvent(element) {
+        element.innerHTML = "You clicked me!";
+      }
 
-        function clickEvent(element) {
-            element.innerHTML = "You clicked me!";
-        }
+      function doubleClick(element) {
+        element.innerHTML = "Double Click!";
+      }
 
-        function doubleClick(element) {
-            element.innerHTML = "Double Click!";
-        }
+      function mouseOver(element) {
+        element.style.backgroundColor = "yellow";
+      }
 
-        function mouseOver(element) {
-            element.style.backgroundColor = "yellow";
-        }
+      function mouseOut(element) {
+        element.style.backgroundColor = "lightblue";
+      }
 
-        function mouseOut(element) {
-            element.style.backgroundColor = "lightblue";
-        }
+      function mouseDown(element) {
+        element.innerHTML = "Mouse Down";
+      }
 
-        function mouseDown(element) {
-            element.innerHTML = "Mouse Down";
-        }
-
-        function mouseUp(element) {
-            element.innerHTML = "Mouse Up";
-        }
-
+      function mouseUp(element) {
+        element.innerHTML = "Mouse Up";
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
