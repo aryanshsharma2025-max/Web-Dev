@@ -1,45 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Form Events Demo</title>
-</head>
-<body>
-  <h2>Form Events Demo</h2>
+  <head>
+    <title>Form Events Demo</title>
+  </head>
+  <body>
+    <h2>Form Events Demo</h2>
 
-  <label for="studentName">Enter your name:</label>
-  <input type="text" id="studentName" placeholder="Type your name" onfocus="showFocus()" onblur="showBlur()" oninput="showInput()"><br><br>
+    <label for="studentName">Enter your name:</label>
+    <input
+      type="text"
+      id="studentName"
+      placeholder="Type your name"
+      onfocus="showFocus()"
+      onblur="showBlur()"
+      oninput="showInput()"
+    /><br /><br />
 
-  <label for="course">Select course:</label>
-  <select id="course" onchange="showCourse()">
-    <option value="">--Select Course--</option>
-    <option value="Web Development">Web Development</option>
-    <option value="Python">Python</option>
-    <option value="Java">Java</option>
-  </select>
+    <label for="course">Select course:</label>
+    <select id="course" onchange="showCourse()">
+      <option value="">--Select Course--</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Python">Python</option>
+      <option value="Java">Java</option>
+    </select>
 
-  <p id="result"></p>
+    <p id="result"></p>
 
-  <script>
-    function showFocus() {
-      document.getElementById("result").innerText = "Name input box is selected.";
-    }
-
-    function showBlur() {
-      document.getElementById("result").innerText = "Name input box lost focus.";
-    }
-
-    function showInput() {
-      let name = document.getElementById("studentName").value;
-      document.getElementById("result").innerText = "You typed: " + name;
-    }
-
-    function showCourse() {
-      let course = document.getElementById("course").value;
-
-      if (course !== "") {
-        document.getElementById("result").innerText = "You selected: " + course;
+    <script>
+      function showFocus() {
+        document.getElementById("result").innerText =
+          "Name input box is selected.";
       }
-    }
-  </script>
-</body>
+
+      function showBlur() {
+        document.getElementById("result").innerText =
+          "Name input box lost focus.";
+      }
+
+      function showInput() {
+        let name = document.getElementById("studentName").value;
+        document.getElementById("result").innerText = "You typed: " + name;
+      }
+
+      function showCourse() {
+        let course = document.getElementById("course").value;
+
+        if (course !== "") {
+          document.getElementById("result").innerText =
+            "You selected: " + course;
+        }
+      }
+    </script>
+  </body>
 </html>
