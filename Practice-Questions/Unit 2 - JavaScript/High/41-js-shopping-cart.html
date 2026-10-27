@@ -1,44 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Shopping Cart</title>
-</head>
-<body>
-  <h2>Shopping Cart Total</h2>
+  <head>
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <h2>Shopping Cart Total</h2>
 
-  <label for="productName">Product name:</label>
-  <input type="text" id="productName" placeholder="Enter product name"><br><br>
+    <label for="productName">Product name:</label>
+    <input
+      type="text"
+      id="productName"
+      placeholder="Enter product name"
+    /><br /><br />
 
-  <label for="price">Price per item:</label>
-  <input type="number" id="price" placeholder="Enter price"><br><br>
+    <label for="price">Price per item:</label>
+    <input type="number" id="price" placeholder="Enter price" /><br /><br />
 
-  <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" placeholder="Enter quantity"><br><br>
+    <label for="quantity">Quantity:</label>
+    <input
+      type="number"
+      id="quantity"
+      placeholder="Enter quantity"
+    /><br /><br />
 
-  <button onclick="calculateTotal()">Add to Cart</button>
+    <button onclick="calculateTotal()">Add to Cart</button>
 
-  <p id="result"></p>
+    <p id="result"></p>
 
-  <script>
-    function calculateTotal() {
-      let productName = document.getElementById("productName").value;
-      let price = Number(document.getElementById("price").value);
-      let quantity = Number(document.getElementById("quantity").value);
-      let subtotal = price * quantity;
-      let discount = 0;
+    <script>
+      function calculateTotal() {
+        let productName = document.getElementById("productName").value;
+        let price = Number(document.getElementById("price").value);
+        let quantity = Number(document.getElementById("quantity").value);
+        let subtotal = price * quantity;
+        let discount = 0;
 
-      if (subtotal >= 1000) {
-        discount = subtotal * 0.10;
+        if (subtotal >= 1000) {
+          discount = subtotal * 0.1;
+        }
+
+        let finalAmount = subtotal - discount;
+
+        document.getElementById("result").innerHTML =
+          "Product: " +
+          productName +
+          "<br>" +
+          "Subtotal: Rs. " +
+          subtotal +
+          "<br>" +
+          "Discount: Rs. " +
+          discount +
+          "<br>" +
+          "Final Amount: Rs. " +
+          finalAmount;
       }
-
-      let finalAmount = subtotal - discount;
-
-      document.getElementById("result").innerHTML =
-        "Product: " + productName + "<br>" +
-        "Subtotal: Rs. " + subtotal + "<br>" +
-        "Discount: Rs. " + discount + "<br>" +
-        "Final Amount: Rs. " + finalAmount;
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
