@@ -1,42 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <title>Gross Salary</title>
+  </head>
 
-<head>
-  <title>Gross Salary</title>
-</head>
+  <body>
+    <h2>Calculate Gross Salary</h2>
 
-<body>
-  <h2>Calculate Gross Salary</h2>
+    <label for="basic">Enter basic salary:</label>
+    <input type="number" id="basic" placeholder="Basic salary" />
+    <button onclick="calculateGross()">Calculate</button>
 
-  <label for="basic">Enter basic salary:</label>
-  <input type="number" id="basic" placeholder="Basic salary">
-  <button onclick="calculateGross()">Calculate</button>
+    <p id="result"></p>
 
-  <p id="result"></p>
+    <script>
+      function calculateGross() {
+        let basic = document.getElementById("basic").value;
+        basic = Number(basic);
 
-  <script>
-    function calculateGross() {
-      let basic = document.getElementById("basic").value;
-      basic = Number(basic);
+        let da, hra, gross;
 
-      let da, hra, gross;
+        if (basic <= 10000) {
+          da = basic * 0.2;
+          hra = basic * 0.1;
+        } else if (basic <= 20000) {
+          da = basic * 0.25;
+          hra = basic * 0.15;
+        } else {
+          da = basic * 0.3;
+          hra = basic * 0.2;
+        }
 
-      if (basic <= 10000) {
-        da = basic * 0.20;
-        hra = basic * 0.10;
-      } else if (basic <= 20000) {
-        da = basic * 0.25;
-        hra = basic * 0.15;
-      } else {
-        da = basic * 0.30;
-        hra = basic * 0.20;
+        gross = basic + da + hra;
+
+        document.getElementById("result").innerText =
+          "Gross Salary is: " + gross;
       }
-
-      gross = basic + da + hra;
-
-      document.getElementById("result").innerText = "Gross Salary is: " + gross;
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
