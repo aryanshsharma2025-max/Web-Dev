@@ -1,35 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <title>Even, Odd or Zero</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>Even, Odd or Zero</h2>
 
     <label for="num">Enter the number:</label>
-    <input type="number" id="num" placeholder="Enter Number">
+    <input type="number" id="num" placeholder="Enter Number" />
     <button onclick="CheckEOZ()">Check</button>
 
     <p id="result"></p>
 
     <script>
-        function CheckEOZ() {
-            let num = Number(document.getElementById("num").value);
-            let category;
+      function CheckEOZ() {
+        let num = Number(document.getElementById("num").value);
+        let category;
 
-            if (num === 0) {
-                category = "Zero";
-            } else if (num % 2 === 0) {
-                category = "Even";
-            } else {
-                category = "Odd";
-            }
-
-            document.getElementById("result").innerHTML = "The number is: " + category;
+        if (num === 0) {
+          category = "Zero";
+        } else if (num % 2 === 0) {
+          category = "Even";
+        } else {
+          category = "Odd";
         }
-    </script>
-</body>
 
+        document.getElementById("result").innerHTML =
+          "The number is: " + category;
+      }
+    </script>
+  </body>
 </html>
