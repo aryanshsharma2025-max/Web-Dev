@@ -1,37 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <title>Movie Ticket Category</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>Movie Ticket Category</h2>
 
     <label for="age">Enter your age:</label>
-    <input type="number" id="age" placeholder="Enter age">
+    <input type="number" id="age" placeholder="Enter age" />
     <button onclick="checkCategory()">Check</button>
 
     <p id="result"></p>
 
     <script>
-        function checkCategory() {
-            let age = Number(document.getElementById("age").value);
-            let category;
+      function checkCategory() {
+        let age = Number(document.getElementById("age").value);
+        let category;
 
-            if (age < 12) {
-                category = "Child";
-            } else if (age >= 12 && age <= 59) {
-                category = "Adult";
-            } else if (age >= 60) {
-                category = "Senior Citizen";
-            } else {
-                category = "INVALID";
-            }
-
-            document.getElementById("result").innerHTML = "Ticket Category: " + category;
+        if (age < 12) {
+          category = "Child";
+        } else if (age >= 12 && age <= 59) {
+          category = "Adult";
+        } else if (age >= 60) {
+          category = "Senior Citizen";
+        } else {
+          category = "INVALID";
         }
-    </script>
-</body>
 
+        document.getElementById("result").innerHTML =
+          "Ticket Category: " + category;
+      }
+    </script>
+  </body>
 </html>
