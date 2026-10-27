@@ -1,104 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Image Gallery and Slideshow</title>
-        <style>
-            body {
-            font-family:Arial,sans-serif;
-            text-align:center
-            }
-            #main {
-            width:400px;
-            height:250px;
-            border:4px solid #1f4e79;
-            border-radius:8px
-            }
-            #caption {
-            font-size:18px;
-            margin:8px
-            }
-            button {
-            padding:8px 16px;
-            font-size:16px;
-            margin:4px
-            }
-            #thumbs img {
-            width:80px;
-            height:50px;
-            margin:4px;
-            border:2px solid transparent;
-            cursor:pointer
-            }
-            #thumbs img.active {
-            border-color:orange
-            }
-        </style>
-    </head>
-    <body>
-        <h2>Image Gallery with Slideshow</h2>
-        <img id="main" src="" alt="gallery image">
-        <div id="caption">
-        </div>
-        <div>
-            <button onclick="prev()">&laquo; Previous</button>
-            <button id="playBtn" onclick="toggleSlideshow()">Start Slideshow</button>
-            <button onclick="next()">Next &raquo;</button>
-        </div>
-        <div id="thumbs">
-        </div>
-        <script>
-            function makeImage(color,text) {
-            var svg="<svg xmlns='http://www.w3.org/2000/svg' width='400' height='250'>
-            <rect width='400' height='250' fill='"+color+"'/>
-                <text x='200' y='135' font-size='40' fill='white' text-anchor='middle'>"+text+"</text>
-            </svg>";
-            return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);
-            }
-            var names=["Mountain","Beach","Forest","Desert","City"],colors=["#34495e","#2980b9","#27ae60","#d35400","#8e44ad"],images=names.map(function(n,i) {
-            return makeImage(colors[i],n);
-            }
-            ),current=0,timer=null,main=document.getElementById("main"),thumbs=document.getElementById("thumbs");
-            images.forEach(function(src,i) {
-            var t=document.createElement("img");
-            t.src=src;
-            t.onclick=function() {
-            current=i;
-            show();
-            }
-            ;
-            thumbs.appendChild(t);
-            }
-            );
-            function show() {
-            main.src=images[current];
-            document.getElementById("caption").innerHTML="Image "+(current+1)+" of "+images.length+": "+names[current];
-            var list=thumbs.getElementsByTagName("img");
-            for(var i=0;
-            i<list.length;
-            i++)list[i].className=i===current?"active":"";
-            }
-            function next() {
-            current=(current+1)%images.length;
-            show();
-            }
-            function prev() {
-            current=(current-1+images.length)%images.length;
-            show();
-            }
-            function toggleSlideshow() {
-            var btn=document.getElementById("playBtn");
-            if(timer===null) {
-            timer=setInterval(next,2000);
-            btn.innerHTML="Stop Slideshow";
-            }
-            else {
-            clearInterval(timer);
-            timer=null;
-            btn.innerHTML="Start Slideshow";
-            }
-            }
-            show();
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Gallery and Slideshow</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #main {
+        width: 400px;
+        height: 250px;
+        border: 4px solid #1f4e79;
+        border-radius: 8px;
+      }
+      #caption {
+        font-size: 18px;
+        margin: 8px;
+      }
+      button {
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 4px;
+      }
+      #thumbs img {
+        width: 80px;
+        height: 50px;
+        margin: 4px;
+        border: 2px solid transparent;
+        cursor: pointer;
+      }
+      #thumbs img.active {
+        border-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Image Gallery with Slideshow</h2>
+    <img id="main" src="" alt="gallery image" />
+    <div id="caption"></div>
+    <div>
+      <button onclick="prev()">&laquo; Previous</button>
+      <button id="playBtn" onclick="toggleSlideshow()">Start Slideshow</button>
+      <button onclick="next()">Next &raquo;</button>
+    </div>
+    <div id="thumbs"></div>
+    <script>
+      function makeImage(color,text) {
+      var svg="<svg xmlns='http://www.w3.org/2000/svg' width='400' height='250'>
+      <rect width='400' height='250' fill='"+color+"'/>
+          <text x='200' y='135' font-size='40' fill='white' text-anchor='middle'>"+text+"</text>
+      </svg>";
+      return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg);
+      }
+      var names=["Mountain","Beach","Forest","Desert","City"],colors=["#34495e","#2980b9","#27ae60","#d35400","#8e44ad"],images=names.map(function(n,i) {
+      return makeImage(colors[i],n);
+      }
+      ),current=0,timer=null,main=document.getElementById("main"),thumbs=document.getElementById("thumbs");
+      images.forEach(function(src,i) {
+      var t=document.createElement("img");
+      t.src=src;
+      t.onclick=function() {
+      current=i;
+      show();
+      }
+      ;
+      thumbs.appendChild(t);
+      }
+      );
+      function show() {
+      main.src=images[current];
+      document.getElementById("caption").innerHTML="Image "+(current+1)+" of "+images.length+": "+names[current];
+      var list=thumbs.getElementsByTagName("img");
+      for(var i=0;
+      i<list.length;
+      i++)list[i].className=i===current?"active":"";
+      }
+      function next() {
+      current=(current+1)%images.length;
+      show();
+      }
+      function prev() {
+      current=(current-1+images.length)%images.length;
+      show();
+      }
+      function toggleSlideshow() {
+      var btn=document.getElementById("playBtn");
+      if(timer===null) {
+      timer=setInterval(next,2000);
+      btn.innerHTML="Stop Slideshow";
+      }
+      else {
+      clearInterval(timer);
+      timer=null;
+      btn.innerHTML="Start Slideshow";
+      }
+      }
+      show();
+    </script>
+  </body>
 </html>
