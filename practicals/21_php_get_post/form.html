@@ -1,29 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>GET and POST Forms</title>
-    </head>
-    <body>
-        <h2>Form using GET method</h2>
-        <form action="process.php" method="get">Name: <input type="text" name="name" required>
-            <input type="submit" value="Send (GET)">
-        </form>
-        <h2>Form using POST method</h2>
-        <form action="process.php" method="post">
-            <p>Name: <input type="text" name="name" required>
-            </p>
-            <p>Email: <input type="email" name="email" required>
-            </p>
-            <p>Gender: <input type="radio" name="gender" value="Male" checked> Male <input type="radio" name="gender" value="Female"> Female</p>
-            <p>Branch: <select name="branch">
-                <option>CSE</option>
-                <option>ECE</option>
-                <option>ME</option>
-            </select>
-        </p>
-        <p>Skills: <input type="checkbox" name="skills[]" value="HTML"> HTML <input type="checkbox" name="skills[]" value="PHP"> PHP <input type="checkbox" name="skills[]" value="MySQL"> MySQL</p>
-        <input type="submit" value="Send (POST)">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GET and POST Forms</title>
+  </head>
+  <body>
+    <h2>Form using GET method</h2>
+    <form action="process.php" method="get">
+      Name: <input type="text" name="name" required />
+      <input type="submit" value="Send (GET)" />
     </form>
-</body>
+    <h2>Form using POST method</h2>
+    <form action="process.php" method="post">
+      <p>Name: <input type="text" name="name" required /></p>
+      <p>Email: <input type="email" name="email" required /></p>
+      <p>
+        Gender: <input type="radio" name="gender" value="Male" checked /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+      </p>
+      <p>
+        Branch:
+        <select name="branch">
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>ME</option>
+        </select>
+      </p>
+      <p>
+        Skills: <input type="checkbox" name="skills[]" value="HTML" /> HTML
+        <input type="checkbox" name="skills[]" value="PHP" /> PHP
+        <input type="checkbox" name="skills[]" value="MySQL" /> MySQL
+      </p>
+      <input type="submit" value="Send (POST)" />
+    </form>
+  </body>
 </html>
