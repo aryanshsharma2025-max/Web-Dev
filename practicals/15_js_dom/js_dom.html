@@ -1,63 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>DOM Manipulation</title>
-        <style>
-            body {
-            font-family:Arial,sans-serif
-            }
-            #para {
-            padding:10px;
-            border:1px solid #999
-            }
-            li {
-            margin:3px 0
-            }
-        </style>
-    </head>
-    <body>
-        <h2 id="heading">DOM Manipulation</h2>
-        <p id="para">This is the original paragraph.</p>
-        <button onclick="changeText()">Change Text</button>
-        <button onclick="changeStyle()">Change Style</button>
-        <button onclick="addItem()">Add List Item</button>
-        <button onclick="removeItem()">Remove Last Item</button>
-        <button onclick="toggleBox()">Hide / Show</button>
-        <ul id="list">
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ul>
-        <script>
-            var count=2;
-            function changeText() {
-            document.getElementById("heading").innerHTML="Heading changed by JavaScript";
-            document.getElementById("para").textContent="The paragraph text is now updated.";
-            }
-            function changeStyle() {
-            var p=document.getElementById("para");
-            p.style.color="white";
-            p.style.backgroundColor="#1f4e79";
-            p.style.fontSize="22px";
-            p.style.borderRadius="10px";
-            }
-            function addItem() {
-            count++;
-            var li=document.createElement("li");
-            li.appendChild(document.createTextNode("Item "+count));
-            document.getElementById("list").appendChild(li);
-            }
-            function removeItem() {
-            var list=document.getElementById("list");
-            if(list.lastElementChild) {
-            list.removeChild(list.lastElementChild);
-            count--;
-            }
-            }
-            function toggleBox() {
-            var p=document.getElementById("para");
-            p.style.display=p.style.display==="none"?"block":"none";
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Manipulation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #para {
+        padding: 10px;
+        border: 1px solid #999;
+      }
+      li {
+        margin: 3px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="heading">DOM Manipulation</h2>
+    <p id="para">This is the original paragraph.</p>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="addItem()">Add List Item</button>
+    <button onclick="removeItem()">Remove Last Item</button>
+    <button onclick="toggleBox()">Hide / Show</button>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <script>
+      var count = 2;
+      function changeText() {
+        document.getElementById("heading").innerHTML =
+          "Heading changed by JavaScript";
+        document.getElementById("para").textContent =
+          "The paragraph text is now updated.";
+      }
+      function changeStyle() {
+        var p = document.getElementById("para");
+        p.style.color = "white";
+        p.style.backgroundColor = "#1f4e79";
+        p.style.fontSize = "22px";
+        p.style.borderRadius = "10px";
+      }
+      function addItem() {
+        count++;
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode("Item " + count));
+        document.getElementById("list").appendChild(li);
+      }
+      function removeItem() {
+        var list = document.getElementById("list");
+        if (list.lastElementChild) {
+          list.removeChild(list.lastElementChild);
+          count--;
+        }
+      }
+      function toggleBox() {
+        var p = document.getElementById("para");
+        p.style.display = p.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
 </html>
