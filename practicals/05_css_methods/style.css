@@ -1,17 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
 h1 {
-    color: navy;
-    text-align: center;
+  color: navy;
+  text-align: center;
 }
 
 .box {
-    width: 300px;
-    padding: 15px;
-    margin: 20px auto;
-    background-color: #ffe9a8;
-    border: 2px solid orange;
+  width: 300px;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: #ffe9a8;
+  border: 2px solid orange;
 }
