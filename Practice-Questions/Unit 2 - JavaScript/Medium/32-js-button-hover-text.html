@@ -1,23 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Button Hover Text</title>
-</head>
-<body>
-  <h2>Button Hover Event</h2>
+  <head>
+    <title>Button Hover Text</title>
+  </head>
+  <body>
+    <h2>Button Hover Event</h2>
 
-  <button onmouseover="showMessage()" onmouseout="clearMessage()">Hover Over Me</button>
+    <button onmouseover="showMessage()" onmouseout="clearMessage()">
+      Hover Over Me
+    </button>
 
-  <p id="result"></p>
+    <p id="result"></p>
 
-  <script>
-    function showMessage() {
-      document.getElementById("result").innerText = "You are hovering over the button.";
-    }
+    <script>
+      function showMessage() {
+        document.getElementById("result").innerText =
+          "You are hovering over the button.";
+      }
 
-    function clearMessage() {
-      document.getElementById("result").innerText = "";
-    }
-  </script>
-</body>
+      function clearMessage() {
+        document.getElementById("result").innerText = "";
+      }
+    </script>
+  </body>
 </html>
