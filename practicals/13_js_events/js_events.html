@@ -1,57 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>JavaScript Events</title>
-        <style>
-            #box {
-            width:220px;
-            height:80px;
-            background:lightblue;
-            text-align:center;
-            line-height:80px;
-            margin:10px 0;
-            border:2px solid #1f4e79
-            }
-        </style>
-    </head>
-    <body>
-        <h2>Event Handling</h2>
-        <h3>onclick</h3>
-        <button onclick="document.getElementById('msg').innerHTML='Button clicked!'">Click Me</button>
-        <p id="msg">
-        </p>
-        <h3>onmouseover / onmouseout</h3>
-        <div id="box" onmouseover="this.style.background='orange';this.innerHTML='Mouse is over'" onmouseout="this.style.background='lightblue';this.innerHTML='Mouse moved out'">Move the mouse here</div>
-        <h3>onsubmit</h3>
-        <form onsubmit="return checkForm()">Name: <input type="text" id="name">
-            <input type="submit" value="Submit">
-        </form>
-        <h3>onkeyup / onchange / onfocus</h3>
-        <input type="text" id="typed" placeholder="type something" onkeyup="document.getElementById('echo').innerHTML='You typed: '+this.value" onfocus="this.style.background='#e6f7ff'" onblur="this.style.background='white'">
-        <p id="echo">
-        </p>
-        <select onchange="alert('Selected: '+this.value)">
-            <option>CSE</option>
-            <option>ECE</option>
-            <option>ME</option>
-        </select>
-        <h3>addEventListener</h3>
-        <button id="btn2">Double-click me</button>
-        <script>
-            function checkForm() {
-            var n=document.getElementById("name").value;
-            if(n.trim()==="") {
-            alert("Name cannot be empty");
-            return false;
-            }
-            alert("Form submitted for "+n);
-            return false;
-            }
-            document.getElementById("btn2").addEventListener("dblclick",function() {
-            alert("Double click event handled");
-            }
-            );
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Events</title>
+    <style>
+      #box {
+        width: 220px;
+        height: 80px;
+        background: lightblue;
+        text-align: center;
+        line-height: 80px;
+        margin: 10px 0;
+        border: 2px solid #1f4e79;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Event Handling</h2>
+    <h3>onclick</h3>
+    <button
+      onclick="document.getElementById('msg').innerHTML = 'Button clicked!'"
+    >
+      Click Me
+    </button>
+    <p id="msg"></p>
+    <h3>onmouseover / onmouseout</h3>
+    <div
+      id="box"
+      onmouseover="
+        this.style.background = 'orange';
+        this.innerHTML = 'Mouse is over';
+      "
+      onmouseout="
+        this.style.background = 'lightblue';
+        this.innerHTML = 'Mouse moved out';
+      "
+    >
+      Move the mouse here
+    </div>
+    <h3>onsubmit</h3>
+    <form onsubmit="return checkForm();">
+      Name: <input type="text" id="name" />
+      <input type="submit" value="Submit" />
+    </form>
+    <h3>onkeyup / onchange / onfocus</h3>
+    <input
+      type="text"
+      id="typed"
+      placeholder="type something"
+      onkeyup="
+        document.getElementById('echo').innerHTML = 'You typed: ' + this.value
+      "
+      onfocus="this.style.background = '#e6f7ff'"
+      onblur="this.style.background = 'white'"
+    />
+    <p id="echo"></p>
+    <select onchange="alert('Selected: ' + this.value)">
+      <option>CSE</option>
+      <option>ECE</option>
+      <option>ME</option>
+    </select>
+    <h3>addEventListener</h3>
+    <button id="btn2">Double-click me</button>
+    <script>
+      function checkForm() {
+        var n = document.getElementById("name").value;
+        if (n.trim() === "") {
+          alert("Name cannot be empty");
+          return false;
+        }
+        alert("Form submitted for " + n);
+        return false;
+      }
+      document.getElementById("btn2").addEventListener("dblclick", function () {
+        alert("Double click event handled");
+      });
+    </script>
+  </body>
 </html>
