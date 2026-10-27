@@ -1,32 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<body>
-
+  <body>
     <h2>Loop with Break</h2>
 
     <p id="result"></p>
 
     <script>
+      let output = "";
 
-        let output = "";
+      for (let i = 1; i <= 10; i++) {
+        if (i === 3) continue;
 
-        for (let i = 1; i <= 10; i++) {
-            if (i === 3)
-                continue;
+        if (i === 5) break;
 
-            if (i === 5) 
-                break;
+        output += i + "<br>";
+      }
 
-            output += i + "<br>";
-
-        }
-
-        document.getElementById("result").innerHTML = output;
-        
-
+      document.getElementById("result").innerHTML = output;
     </script>
-
-</body>
-
+  </body>
 </html>

@@ -1,44 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <title>Form Events</title>
     <script>
-        function submitForm(event) {
-            event.preventDefault();
-            alert("Form submitted");
-        }
-        function resetForm() {
-            alert("Form reset");
-        }
-        function focusField() {
-            document.getElementById("name").style.background = "blue";
-        }
-        function blurEvent() {
-            document.getElementById("name").style.background = "white";
-        }
-        function inputField(event) {
-            document.getElementById("live").innerHTML = event.target.value;
-        }
-        function changeField() {
-            alert("Value changed");
-        }
-        function selectField() {
-            alert("Text selected");
-        }
+      function submitForm(event) {
+        event.preventDefault();
+        alert("Form submitted");
+      }
+      function resetForm() {
+        alert("Form reset");
+      }
+      function focusField() {
+        document.getElementById("name").style.background = "blue";
+      }
+      function blurEvent() {
+        document.getElementById("name").style.background = "white";
+      }
+      function inputField(event) {
+        document.getElementById("live").innerHTML = event.target.value;
+      }
+      function changeField() {
+        alert("Value changed");
+      }
+      function selectField() {
+        alert("Text selected");
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <form onsubmit="submitForm(event)" onreset="resetForm()">
-        <label><b>Name:</b></label>
-        <input type="text" id="name" onfocus="focusField()" onblur="blurEvent()" oninput="inputField(event)"
-            onchange="changeField()" onselect="selectField()" placeholder="Enter your name">
-        <p id="live">Typing shows here..</p>
-        <br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+      <label><b>Name:</b></label>
+      <input
+        type="text"
+        id="name"
+        onfocus="focusField()"
+        onblur="blurEvent()"
+        oninput="inputField(event)"
+        onchange="changeField()"
+        onselect="selectField()"
+        placeholder="Enter your name"
+      />
+      <p id="live">Typing shows here..</p>
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
     </form>
-</body>
-
+  </body>
 </html>
