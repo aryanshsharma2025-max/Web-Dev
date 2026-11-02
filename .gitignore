@@ -17,7 +17,15 @@ desktop.ini
 # Logs and Runtime Caches
 *.log
 
-# Local Server Environments
-xxamp/
-xampp/
-
+# Local Server Environments (ignore XAMPP system files, but keep user PHP code in htdocs)
+xxamp/*
+xampp/*
+!xxamp/htdocs/
+xxamp/htdocs/dashboard/
+xxamp/htdocs/img/
+xxamp/htdocs/webalizer/
+xxamp/htdocs/xampp/
+xxamp/htdocs/applications.html
+xxamp/htdocs/bitnami.css
+xxamp/htdocs/favicon.ico
+xxamp/htdocs/index.php
