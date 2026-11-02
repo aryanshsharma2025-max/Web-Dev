@@ -16,3 +16,8 @@ desktop.ini
 
 # Logs and Runtime Caches
 *.log
+
+# Local Server Environments
+xxamp/
+xampp/
+
