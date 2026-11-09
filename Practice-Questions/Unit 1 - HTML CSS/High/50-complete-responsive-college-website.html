@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SSIPMT Raipur - Official College Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background-color: #f7f7f7;
+      }
+      header {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      nav {
+        background-color: orange;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        color: black;
+        padding: 12px 18px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        background-color: darkorange;
+      }
+      .banner {
+        background-color: lightblue;
+        text-align: center;
+        padding: 40px 15px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .col {
+        background-color: white;
+        flex: 1 1 calc(33.333% - 15px);
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .col h3 {
+        color: darkblue;
+        margin-top: 0;
+      }
+      footer {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      @media (max-width: 600px) {
+        .col {
+          flex: 1 1 100%;
+        }
+        nav {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Shri Shankaracharya Institute of Professional Management &amp;
+        Technology
+      </h1>
+      <p>Mujgahan, Raipur (C.G.) • NAAC 'A+' Accredited</p>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Departments</a>
+      <a href="#">Admissions</a>
+      <a href="#">Placements</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="banner">
+      <h2>Excellence in Technical Education</h2>
+      <p>Empowering students with knowledge, skills, and values.</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Departments</h3>
+          <p>
+            Undergraduate B.Tech programs in CSE, IT, ECE, Mechanical, and Civil
+            Engineering.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Placements</h3>
+          <p>
+            Over 90% placement record with regular campus visits from top IT
+            firms.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Facilities</h3>
+          <p>
+            Central library, air-conditioned computer labs, hostel, sports
+            arena, and canteen.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2026 SSIPMT Raipur. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
