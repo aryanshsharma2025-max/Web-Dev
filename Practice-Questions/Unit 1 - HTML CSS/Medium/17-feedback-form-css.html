@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Feedback Form</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f2f2f2;
+      }
+      .box {
+        background-color: white;
+        width: 450px;
+        margin: 30px auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 12px;
+      }
+      select,
+      textarea,
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+      .submit-btn {
+        background-color: green;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Course Feedback Form</h2>
+      <form>
+        <label for="rollno">Student Roll No:</label>
+        <input type="text" id="rollno" name="rollno" placeholder="e.g. 48" />
+
+        <label for="subject">Select Subject:</label>
+        <select id="subject" name="subject">
+          <option>Web Technology</option>
+          <option>Data Structures &amp; Algorithms</option>
+          <option>Operating Systems</option>
+          <option>Discrete Mathematics</option>
+        </select>
+
+        <label>Teaching Rating:</label>
+        <input type="radio" name="rating" value="excellent" checked /> Excellent
+        <input type="radio" name="rating" value="good" /> Good
+        <input type="radio" name="rating" value="average" /> Average
+        <input type="radio" name="rating" value="poor" /> Poor
+
+        <label for="feedback">Any Comments / Suggestions:</label>
+        <textarea
+          id="feedback"
+          name="feedback"
+          rows="4"
+          placeholder="Write your feedback here..."
+        ></textarea>
+
+        <input type="submit" value="Submit Feedback" class="submit-btn" />
+      </form>
+    </div>
+  </body>
+</html>
