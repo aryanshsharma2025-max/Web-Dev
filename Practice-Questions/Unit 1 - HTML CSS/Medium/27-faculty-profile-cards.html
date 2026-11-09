@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Faculty Profile Cards</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: darkblue;
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .faculty-card {
+        background-color: white;
+        width: 250px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        text-align: center;
+      }
+      .faculty-card h3 {
+        color: #333;
+        margin: 10px 0 5px 0;
+      }
+      .role {
+        color: orange;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      .subject {
+        color: #555;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSE Department Faculty</h1>
+    <div class="card-container">
+      <div class="faculty-card">
+        <h3>Dr. Anand Tamrakar</h3>
+        <p class="role">Head of Department</p>
+        <p class="subject">Specialization: Machine Learning</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Prof. Suman Swarnkar</h3>
+        <p class="role">Assistant Professor</p>
+        <p class="subject">Subject: Web Technology</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Prof. Devbrat Sahu</h3>
+        <p class="role">Assistant Professor</p>
+        <p class="subject">Subject: Operating Systems</p>
+      </div>
+    </div>
+  </body>
+</html>
