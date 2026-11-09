@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Responsive College Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background-color: #f7f7f7;
+      }
+      header {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      nav {
+        background-color: orange;
+        text-align: center;
+        padding: 10px;
+      }
+      nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+      }
+      .banner {
+        background-color: lightblue;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+        max-width: 900px;
+        margin: auto;
+      }
+      .col {
+        flex: 1;
+        background-color: white;
+        padding: 15px;
+        border: 1px solid #ddd;
+      }
+      footer {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      @media (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SSIPMT Raipur</h1>
+      <p>Engineering &amp; Management Institute</p>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Placements</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="banner">
+      <h2>Welcome to Shri Shankaracharya Institute</h2>
+      <p>Building careers in Computer Science and Engineering.</p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3>Academics</h3>
+        <p>
+          Undergraduate engineering courses with modern curriculum and labs.
+        </p>
+      </div>
+      <div class="col">
+        <h3>Placements</h3>
+        <p>
+          Top multinational companies visit our campus every year for hiring.
+        </p>
+      </div>
+      <div class="col">
+        <h3>Campus Life</h3>
+        <p>Technical fests, cultural events, sports competitions, and clubs.</p>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2026 SSIPMT Raipur</p>
+    </footer>
+  </body>
+</html>
