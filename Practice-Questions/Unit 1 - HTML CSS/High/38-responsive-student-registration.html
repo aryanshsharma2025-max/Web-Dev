@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Responsive Student Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+      .form-card {
+        background-color: white;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      h2 {
+        text-align: center;
+        color: darkblue;
+      }
+      .form-row {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-card">
+      <h2>Student Registration</h2>
+      <form>
+        <div class="form-row">
+          <label>Full Name:</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter full name"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label>Roll Number:</label>
+          <input
+            type="text"
+            name="rollno"
+            placeholder="Enter roll number"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label>Email ID:</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter email address"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label>Mobile Number:</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter mobile number"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label>Branch:</label>
+          <select name="branch">
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+          </select>
+        </div>
+        <input type="submit" value="Register Now" />
+      </form>
+    </div>
+  </body>
+</html>
