@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <title>College Facilities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f7f7f7;
+        margin: 0;
+      }
+      header {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 850px;
+        margin: 20px auto;
+        padding: 10px;
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .item {
+        background-color: white;
+        flex: 1 1 calc(50% - 15px);
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+      .item h3 {
+        color: darkblue;
+        margin-top: 0;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      @media (max-width: 600px) {
+        .item {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SSIPMT Campus Facilities</h1>
+    </header>
+    <div class="container">
+      <div class="grid">
+        <div class="item">
+          <h3>Computer Laboratories</h3>
+          <p>
+            Modern PCs with Ubuntu and Windows OS, high speed fiber internet for
+            practical labs.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Central Library</h3>
+          <p>
+            Over 40,000 books, national journals, magazines, and spacious
+            reading hall.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Sports Grounds</h3>
+          <p>
+            Outdoor grounds for cricket, football, volleyball, and indoor table
+            tennis.
+          </p>
+        </div>
+        <div class="item">
+          <h3>College Canteen</h3>
+          <p>
+            Serves hygienic breakfast, lunch, tea, and snacks for students and
+            faculty.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Auditorium</h3>
+          <p>
+            Air-conditioned hall with projector and sound setup for seminars and
+            annual functions.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Wi-Fi Campus</h3>
+          <p>
+            High-speed internet access available throughout academic blocks and
+            hostel.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2026 SSIPMT Raipur</p>
+    </footer>
+  </body>
+</html>
