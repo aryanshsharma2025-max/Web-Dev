@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Admission Portal</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f0f0f0;
+        margin: 20px;
+      }
+      .container {
+        background-color: white;
+        max-width: 750px;
+        margin: auto;
+        padding: 25px;
+        border: 1px solid #ccc;
+      }
+      h1,
+      h2 {
+        color: darkblue;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      th {
+        background-color: lightgreen;
+      }
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 10px 0;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: darkblue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SSIPMT Raipur - Online Admission Portal</h1>
+      <hr />
+
+      <h2>Courses Offered &amp; Eligibility</h2>
+      <table>
+        <tr>
+          <th>Course</th>
+          <th>Duration</th>
+          <th>Eligibility</th>
+        </tr>
+        <tr>
+          <td>B.Tech Computer Science</td>
+          <td>4 Years</td>
+          <td>10+2 with Physics, Maths (45% Marks)</td>
+        </tr>
+        <tr>
+          <td>B.Tech Information Technology</td>
+          <td>4 Years</td>
+          <td>10+2 with Physics, Maths (45% Marks)</td>
+        </tr>
+        <tr>
+          <td>MBA</td>
+          <td>2 Years</td>
+          <td>Graduation with 50% Marks</td>
+        </tr>
+      </table>
+
+      <h2>Apply Online</h2>
+      <form>
+        Student Full Name:
+        <input type="text" name="name" required />
+
+        Email ID:
+        <input type="email" name="email" required />
+
+        Mobile Number:
+        <input type="text" name="phone" required />
+
+        Select Course:
+        <select name="course">
+          <option>B.Tech CSE</option>
+          <option>B.Tech IT</option>
+          <option>B.Tech Mechanical</option>
+          <option>B.Tech Civil</option>
+          <option>MBA</option>
+        </select>
+
+        <input type="submit" value="Submit Admission Form" />
+      </form>
+    </div>
+  </body>
+</html>
