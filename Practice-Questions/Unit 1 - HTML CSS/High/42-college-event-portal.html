@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <title>College Events Portal</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f7f7f7;
+        margin: 0;
+      }
+      header {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+      }
+      .fest-banner {
+        background-color: orange;
+        color: black;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SSIPMT Annual Event &amp; Fest Portal</h1>
+    </header>
+    <div class="container">
+      <div class="fest-banner">
+        <h2>Colosseum 2026 - Annual College Fest</h2>
+        <p>Date: 28th to 30th November 2026 | Venue: College Campus</p>
+      </div>
+
+      <h3>Competitions &amp; Events</h3>
+      <table>
+        <tr>
+          <th>Event Name</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Venue</th>
+        </tr>
+        <tr>
+          <td>Code-A-Thon</td>
+          <td>Technical</td>
+          <td>28-Nov</td>
+          <td>Computer Lab 2</td>
+        </tr>
+        <tr>
+          <td>Web Designing Contest</td>
+          <td>Technical</td>
+          <td>29-Nov</td>
+          <td>Web Tech Lab</td>
+        </tr>
+        <tr>
+          <td>Battle of Bands</td>
+          <td>Cultural</td>
+          <td>29-Nov</td>
+          <td>Auditorium</td>
+        </tr>
+        <tr>
+          <td>Box Cricket Tournament</td>
+          <td>Sports</td>
+          <td>30-Nov</td>
+          <td>College Ground</td>
+        </tr>
+      </table>
+
+      <h3>Event Registration</h3>
+      <form>
+        Student Name: <input type="text" name="name" size="30" /><br /><br />
+        Roll No: <input type="text" name="rollno" size="20" /><br /><br />
+        Event Choice:
+        <select name="event">
+          <option>Code-A-Thon</option>
+          <option>Web Designing Contest</option>
+          <option>Battle of Bands</option>
+          <option>Box Cricket Tournament</option></select
+        ><br /><br />
+        <input type="submit" value="Register for Event" />
+      </form>
+    </div>
+  </body>
+</html>
