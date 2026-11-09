@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Admission Form</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: lightblue;
+      }
+      .form-container {
+        background-color: white;
+        width: 480px;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 8px;
+        border: 1px solid gray;
+      }
+      h2 {
+        text-align: center;
+        color: darkblue;
+        margin-top: 0;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .btn {
+        background-color: darkblue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 15px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 15px;
+      }
+      .btn:hover {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>College Admission Form</h2>
+      <form>
+        <label for="name">Student Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter full name"
+        />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" />
+
+        <label for="phone">Mobile Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter 10-digit number"
+        />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" />
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" /> Male
+        <input type="radio" name="gender" value="female" /> Female
+
+        <label for="course">Branch Applying For:</label>
+        <select id="course" name="course">
+          <option>B.Tech Computer Science &amp; Engineering</option>
+          <option>B.Tech Information Technology</option>
+          <option>B.Tech Electronics &amp; Telecommunication</option>
+          <option>B.Tech Mechanical Engineering</option>
+          <option>B.Tech Civil Engineering</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3"></textarea>
+
+        <input type="submit" value="Submit Application" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
