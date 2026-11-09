@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Attendance</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f0f0f0;
+        margin: 20px;
+      }
+      .container {
+        background-color: white;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      h2 {
+        color: darkblue;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: lightgray;
+      }
+      .good {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Student Attendance Record</h2>
+      <p>
+        <b>Name:</b> Aryansh Sharma | <b>Roll No:</b> 48 | <b>Branch:</b> CSE
+        3rd Sem
+      </p>
+      <hr />
+
+      <table>
+        <tr>
+          <th>Subject Code</th>
+          <th>Subject Name</th>
+          <th>Total Classes</th>
+          <th>Attended</th>
+          <th>Attendance %</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>CS301</td>
+          <td>Discrete Mathematics</td>
+          <td>50</td>
+          <td>44</td>
+          <td>88%</td>
+          <td class="good">Eligible</td>
+        </tr>
+        <tr>
+          <td>CS302</td>
+          <td>Data Structures</td>
+          <td>55</td>
+          <td>50</td>
+          <td>90.9%</td>
+          <td class="good">Eligible</td>
+        </tr>
+        <tr>
+          <td>CS303</td>
+          <td>Operating Systems</td>
+          <td>48</td>
+          <td>41</td>
+          <td>85.4%</td>
+          <td class="good">Eligible</td>
+        </tr>
+        <tr>
+          <td>CS304</td>
+          <td>Web Technology</td>
+          <td>52</td>
+          <td>49</td>
+          <td>94.2%</td>
+          <td class="good">Eligible</td>
+        </tr>
+      </table>
+
+      <p><b>Overall Attendance: 89.7%</b> (Minimum required: 75%)</p>
+    </div>
+  </body>
+</html>
