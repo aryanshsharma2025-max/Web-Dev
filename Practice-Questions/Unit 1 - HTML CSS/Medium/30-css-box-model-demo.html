@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Box Model Demo</title>
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+      .outer-margin {
+        background-color: orange;
+        padding: 30px;
+        display: inline-block;
+        margin-top: 30px;
+      }
+      .border-layer {
+        background-color: yellow;
+        padding: 30px;
+      }
+      .padding-layer {
+        background-color: lightgreen;
+        padding: 30px;
+      }
+      .content-layer {
+        background-color: lightblue;
+        padding: 20px 40px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Box Model Demonstration</h1>
+    <p>
+      Every element in CSS consists of Margin, Border, Padding, and Content:
+    </p>
+
+    <div class="outer-margin">
+      <b>MARGIN (Orange)</b>
+      <div class="border-layer">
+        <b>BORDER (Yellow)</b>
+        <div class="padding-layer">
+          <b>PADDING (Green)</b>
+          <div class="content-layer">CONTENT (Blue)</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
