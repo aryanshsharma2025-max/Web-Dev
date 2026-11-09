@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Registration Form</title>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <hr />
+
+    <form>
+      Name:
+      <input type="text" name="name" size="40" />
+      <br /><br />
+
+      Roll No:
+      <input type="text" name="rollno" size="20" />
+      <br /><br />
+
+      Email:
+      <input type="email" name="email" size="40" />
+      <br /><br />
+
+      Password:
+      <input type="password" name="password" size="20" />
+      <br /><br />
+
+      Date of Birth:
+      <input type="date" name="dob" />
+      <br /><br />
+
+      Gender:
+      <input type="radio" name="gender" value="male" /> Male
+      <input type="radio" name="gender" value="female" /> Female <br /><br />
+
+      Branch:
+      <select name="branch">
+        <option>CSE</option>
+        <option>IT</option>
+        <option>ECE</option>
+        <option>Mechanical</option>
+        <option>Civil</option>
+      </select>
+      <br /><br />
+
+      Mobile Number:
+      <input type="tel" name="mobile" size="20" />
+      <br /><br />
+
+      Address:<br />
+      <textarea name="address" rows="3" cols="40"></textarea>
+      <br /><br />
+
+      <input type="submit" value="Register" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
