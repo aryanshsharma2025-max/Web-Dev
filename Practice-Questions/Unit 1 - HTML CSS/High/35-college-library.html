@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>College Library</title>
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f4f4f4;
+        margin: 20px;
+      }
+      .library-box {
+        background-color: white;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      h1 {
+        color: darkblue;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="library-box">
+      <h1>SSIPMT Central Library</h1>
+      <hr />
+
+      <p>
+        Search for a book:
+        <input
+          type="text"
+          placeholder="Enter book title or author..."
+          size="40"
+        />
+        <button>Search</button>
+      </p>
+
+      <h3>Books Available for 3rd Semester CSE</h3>
+      <table>
+        <tr>
+          <th>Book ID</th>
+          <th>Book Title</th>
+          <th>Author</th>
+          <th>Copies Available</th>
+        </tr>
+        <tr>
+          <td>B101</td>
+          <td>Data Structures Using C and C++</td>
+          <td>Tanenbaum</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>B102</td>
+          <td>HTML &amp; CSS: The Complete Reference</td>
+          <td>Thomas Powell</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>B103</td>
+          <td>Operating System Concepts</td>
+          <td>Silberschatz</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>B104</td>
+          <td>Discrete Mathematics</td>
+          <td>Kenneth Rosen</td>
+          <td>8</td>
+        </tr>
+      </table>
+
+      <h3>Library Rules</h3>
+      <ul>
+        <li>Library timing: 9:00 AM to 5:00 PM (Monday to Saturday).</li>
+        <li>Students can issue maximum 3 books at a time.</li>
+        <li>Books must be returned within 14 days to avoid fine.</li>
+      </ul>
+    </div>
+  </body>
+</html>
