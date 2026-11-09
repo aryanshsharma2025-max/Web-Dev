@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Responsive College Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 850px;
+        margin: auto;
+        padding: 15px;
+      }
+      .search-box {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .book-card {
+        background-color: white;
+        flex: 1 1 calc(33.333% - 15px);
+        padding: 15px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      .book-card h3 {
+        color: darkblue;
+        margin: 0 0 5px 0;
+      }
+      @media (max-width: 600px) {
+        .book-card {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SSIPMT Digital Library</h1>
+      <p>Search &amp; Access Engineering Textbooks</p>
+    </header>
+    <div class="container">
+      <input
+        type="text"
+        class="search-box"
+        placeholder="Search books by title, author, or subject..."
+      />
+      <div class="book-list">
+        <div class="book-card">
+          <h3>Data Structures</h3>
+          <p>Author: Tanenbaum</p>
+          <p>Status: Available</p>
+        </div>
+        <div class="book-card">
+          <h3>Web Technology</h3>
+          <p>Author: Thomas Powell</p>
+          <p>Status: Available</p>
+        </div>
+        <div class="book-card">
+          <h3>Operating Systems</h3>
+          <p>Author: Silberschatz</p>
+          <p>Status: Available</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
